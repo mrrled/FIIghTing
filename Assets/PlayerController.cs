@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
-    public bool isGrounded; // Проверка, находится ли объект на земле
+    public bool isGrounded; // Проверка, находится ли объект на земле 
     public Transform groundCheck; // Объект для проверки земли (например, пустой GameObject)
     public float groundCheckRadius = 0.2f;
     public LayerMask whatIsGround; // Слой, представляющий землю
