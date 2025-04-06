@@ -132,9 +132,9 @@ GameObject:
   - component: {fileID: 275601217}
   - component: {fileID: 275601216}
   - component: {fileID: 275601221}
-  - component: {fileID: 275601222}
   - component: {fileID: 275601223}
   - component: {fileID: 275601224}
+  - component: {fileID: 275601225}
   m_Layer: 6
   m_Name: Player1
   m_TagString: Untagged
@@ -313,8 +313,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275601222}
-        m_TargetAssemblyTypeName: Player1, Assembly-CSharp
+      - m_Target: {fileID: 275601225}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
         m_Arguments:
@@ -337,8 +337,8 @@ MonoBehaviour:
     m_ActionName: 'Player/Fire[/Mouse/leftButton]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275601222}
-        m_TargetAssemblyTypeName: Player1, Assembly-CSharp
+      - m_Target: {fileID: 275601225}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
         m_Arguments:
@@ -412,24 +412,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &275601222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275601215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73bfe98487a2248418aa873709e725d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 7
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  groundCheck: {fileID: 735794557}
 --- !u!114 &275601223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,6 +443,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &275601225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275601215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ddad7ac9098a549b516125ecfda4e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpForce: 7
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  groundCheck: {fileID: 735794557}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +694,7 @@ GameObject:
   - component: {fileID: 735794556}
   - component: {fileID: 735794555}
   m_Layer: 8
-  m_Name: Square
+  m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -829,9 +829,9 @@ GameObject:
   - component: {fileID: 1019975497}
   - component: {fileID: 1019975496}
   - component: {fileID: 1019975495}
-  - component: {fileID: 1019975500}
   - component: {fileID: 1019975501}
   - component: {fileID: 1019975502}
+  - component: {fileID: 1019975503}
   m_Layer: 7
   m_Name: Player2
   m_TagString: Untagged
@@ -866,8 +866,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1019975500}
-        m_TargetAssemblyTypeName: Player2, Assembly-CSharp
+      - m_Target: {fileID: 1019975503}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
         m_Arguments:
@@ -881,17 +881,9 @@ MonoBehaviour:
     m_ActionId: a09eadc4-8f1c-4451-86fc-d3c5f370e1d9
     m_ActionName: 'Player/Move[/Keyboard/i,/Keyboard/k,/Keyboard/j,/Keyboard/l]'
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2e386b54-0123-4cb8-9692-0e71f7c815d7
-    m_ActionName: 'Player/Look[/Mouse/delta]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e5f85866-9ed6-4365-b8bf-8191d1e97f0c
-    m_ActionName: 'Player/Fire[/Mouse/leftButton]'
-  - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1019975500}
-        m_TargetAssemblyTypeName: Player2, Assembly-CSharp
+      - m_Target: {fileID: 1019975503}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
         m_Arguments:
@@ -946,9 +938,9 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1019975502}
+      - m_Target: {fileID: 1019975493}
         m_TargetAssemblyTypeName: PlayerAttack, Assembly-CSharp
-        m_MethodName: Attack
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1109,24 +1101,6 @@ Transform:
   - {fileID: 2124756897}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1019975500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019975493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3b007c72724a70449cb8fca01785e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 7
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  groundCheck: {fileID: 735794557}
 --- !u!114 &1019975501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1158,6 +1132,24 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &1019975503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019975493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ddad7ac9098a549b516125ecfda4e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpForce: 7
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  groundCheck: {fileID: 735794557}
 --- !u!1 &1711974905
 GameObject:
   m_ObjectHideFlags: 0
