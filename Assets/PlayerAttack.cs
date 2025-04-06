@@ -17,9 +17,11 @@ public class PlayerAttack : MonoBehaviour
         if (context.performed)
         {
             Collider2D hitPlayer = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
-            hitPlayer.GetComponent<PlayerHealth>().TakeDamage(damage);
-            Debug.Log("We hit player" + hitPlayer.name);
-            
+            if (hitPlayer != null)
+            {
+                hitPlayer.GetComponent<PlayerHealth>().TakeDamage(damage);
+                Debug.Log("We hit player: " + hitPlayer.name);
+            }
         }
     }
 
