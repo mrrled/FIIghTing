@@ -11,21 +11,17 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask playerLayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    void Update()
-    {
-        
-    }
     public void Attack(InputAction.CallbackContext context)
     {
         //animation attack
         if (context.performed)
         {
             Collider2D hitPlayer = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
-            if (hitPlayer == null)
-                return;
-            hitPlayer.GetComponent<PlayerHealth>().TakeDamage(damage);
-            Debug.Log("We hit player" + hitPlayer.name);
-
+            if (hitPlayer != null)
+            {
+                hitPlayer.GetComponent<PlayerHealth>().TakeDamage(damage);
+                Debug.Log("We hit player: " + hitPlayer.name);
+            }
         }
     }
 
