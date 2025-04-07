@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class Player1: MonoBehaviour
@@ -8,12 +9,13 @@ public class Player1: MonoBehaviour
     public float jumpForce = 7f;
     public LayerMask groundLayer;
     public Transform groundCheck;
-    
+    //public PlayerHealth playerHealth;
     private float horizontal;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        //playerHealth = GetComponent<PlayerHealth>();
     }
     
     private void FixedUpdate()

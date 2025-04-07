@@ -1,25 +1,28 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 100;
-    private int currentHealth;
+    public float maxHealth = 100f;
+    public float currentHealth;
+    public Image healthBar;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         currentHealth = maxHealth;
     }
-
-    // Update is called once per frame
-    public void TakeDamage(int damage)
+    
+    public void TakeDamage(float damage)
     {
         //animation take damage
-        currentHealth -= damage;
-        
-        if (currentHealth <= 0)
+        currentHealth = Math.Max(0f, currentHealth - damage);
+        healthBar.fillAmount -= damage / maxHealth;
+        if (currentHealth <= 1e-10)
             Die();
     }
-
     void Die()
     {
         //exit or new round
