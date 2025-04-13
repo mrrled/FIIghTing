@@ -328,14 +328,6 @@ MonoBehaviour:
     m_ActionId: 0d1ada94-c179-48a5-919b-76c199c3c12a
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 89af3024-cc54-4819-816c-fe822893bbee
-    m_ActionName: 'Player/Look[/Mouse/delta]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ed3d52aa-1598-4996-b9c3-ad2a4d46f58a
-    m_ActionName: 'Player/Fire[/Mouse/leftButton]'
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 275601225}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
@@ -1094,7 +1086,7 @@ Transform:
   m_GameObject: {fileID: 1019975493}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.86, y: -2.74, z: 0}
+  m_LocalPosition: {x: 5.92, y: -2.74, z: 0}
   m_LocalScale: {x: 1, y: 2.4625, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
