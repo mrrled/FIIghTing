@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8be88081-7afd-4130-b23a-a5396af6f688" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.idea.FIITGame/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/.idea.FIITGame/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/.idea.FIITGame/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HealthBar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HealthBar.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Packages/HealthBar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Packages/LifeBar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PlayerController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayerMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,11 +31,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Player1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PlayerAttack.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/FIIghTing/Assets/PlayerAttack.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/FIIghTing/Assets/PlayerAttack.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/FIIghTing/Assets/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/FIIghTing/Assets/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2vLIZDLxelZHEwSQ6bSOy7iZV2M" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,7 +50,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -46,6 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1743917981776</updated>
       <workItem from="1743917983652" duration="25000" />
+      <workItem from="1744654268477" duration="264000" />
     </task>
     <servers />
   </component>

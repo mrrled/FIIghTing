@@ -132,9 +132,9 @@ GameObject:
   - component: {fileID: 275601217}
   - component: {fileID: 275601216}
   - component: {fileID: 275601221}
-  - component: {fileID: 275601222}
   - component: {fileID: 275601223}
   - component: {fileID: 275601224}
+  - component: {fileID: 275601225}
   m_Layer: 6
   m_Name: Player1
   m_TagString: Untagged
@@ -313,8 +313,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275601222}
-        m_TargetAssemblyTypeName: Player1, Assembly-CSharp
+      - m_Target: {fileID: 275601225}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
         m_Arguments:
@@ -328,17 +328,9 @@ MonoBehaviour:
     m_ActionId: 0d1ada94-c179-48a5-919b-76c199c3c12a
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 89af3024-cc54-4819-816c-fe822893bbee
-    m_ActionName: 'Player/Look[/Mouse/delta]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ed3d52aa-1598-4996-b9c3-ad2a4d46f58a
-    m_ActionName: 'Player/Fire[/Mouse/leftButton]'
-  - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275601222}
-        m_TargetAssemblyTypeName: Player1, Assembly-CSharp
+      - m_Target: {fileID: 275601225}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
         m_Arguments:
@@ -412,25 +404,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &275601222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275601215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73bfe98487a2248418aa873709e725d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 7
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  groundCheck: {fileID: 735794557}
-  playerHealth: {fileID: 0}
 --- !u!114 &275601223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,7 +434,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d260499c08936c24fb3b94fc9cedcbb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
   healthBar: {fileID: 796275894}
+--- !u!114 &275601225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275601215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b3897907c56dc4284e532fd5fe6e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpForce: 7
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  groundCheck: {fileID: 735794557}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,8 +977,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9819d9f4178ef4ebf737b14cbbac4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 796275894}
-  player: {fileID: 275601219}
 --- !u!1 &1019975493
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,9 +990,9 @@ GameObject:
   - component: {fileID: 1019975497}
   - component: {fileID: 1019975496}
   - component: {fileID: 1019975495}
-  - component: {fileID: 1019975500}
   - component: {fileID: 1019975501}
   - component: {fileID: 1019975502}
+  - component: {fileID: 1019975503}
   m_Layer: 7
   m_Name: Player2
   m_TagString: Untagged
@@ -1036,8 +1027,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1019975500}
-        m_TargetAssemblyTypeName: Player2, Assembly-CSharp
+      - m_Target: {fileID: 1019975503}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
         m_Arguments:
@@ -1052,8 +1043,8 @@ MonoBehaviour:
     m_ActionName: 'Player/Move[/Keyboard/i,/Keyboard/k,/Keyboard/j,/Keyboard/l]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1019975500}
-        m_TargetAssemblyTypeName: Player2, Assembly-CSharp
+      - m_Target: {fileID: 1019975503}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
         m_Arguments:
@@ -1271,24 +1262,6 @@ Transform:
   - {fileID: 2124756897}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1019975500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019975493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3b007c72724a70449cb8fca01785e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 7
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  groundCheck: {fileID: 735794557}
 --- !u!114 &1019975501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1301,6 +1274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d260499c08936c24fb3b94fc9cedcbb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
   healthBar: {fileID: 0}
 --- !u!114 &1019975502
 MonoBehaviour:
@@ -1320,6 +1295,24 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &1019975503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019975493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b3897907c56dc4284e532fd5fe6e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpForce: 7
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  groundCheck: {fileID: 735794557}
 --- !u!1 &1711974905
 GameObject:
   m_ObjectHideFlags: 0
