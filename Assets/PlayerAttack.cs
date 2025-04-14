@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerAttack : MonoBehaviour
 {
     public Transform attackPoint;
-    public int damage = 20;
+    public float damage = 20f;
 
     public float attackRange = 0.5f;
 
