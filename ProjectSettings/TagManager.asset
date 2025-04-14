@@ -14,9 +14,9 @@ TagManager:
   - Player1
   - Player2
   - Terrain
-  - 
-  - 
-  - 
+  - Hurtbox
+  - PushBox
+  - Hitbox
   - 
   - 
   - 

@@ -24,7 +24,6 @@ public class PlayerAttack : MonoBehaviour
             }
         }
     }
-
     void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
