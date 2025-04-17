@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 275601217}
   - component: {fileID: 275601216}
   - component: {fileID: 275601221}
-  - component: {fileID: 275601223}
   - component: {fileID: 275601225}
   - component: {fileID: 275601227}
   - component: {fileID: 275601228}
@@ -408,24 +407,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &275601223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275601215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dbcad1160f00754e9ed894e0e63e2a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackPoint: {fileID: 1711974906}
-  damage: 20
-  attackRange: 0.5
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!114 &275601225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1452,7 +1433,6 @@ GameObject:
   - component: {fileID: 1019975497}
   - component: {fileID: 1019975496}
   - component: {fileID: 1019975495}
-  - component: {fileID: 1019975502}
   - component: {fileID: 1019975504}
   - component: {fileID: 1019975503}
   - component: {fileID: 1019975505}
@@ -1728,24 +1708,6 @@ Transform:
   - {fileID: 660238217}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1019975502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019975493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dbcad1160f00754e9ed894e0e63e2a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackPoint: {fileID: 2124756897}
-  damage: 20
-  attackRange: 0.5
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &1019975503
 MonoBehaviour:
   m_ObjectHideFlags: 0
