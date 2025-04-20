@@ -65,10 +65,14 @@ public class PlayerController : MonoBehaviour
             isCrouching = true;
             transform.localScale = new Vector3(originalScale.x, originalScale.y * crouchCoefficient, originalScale.z);
             boxCollider.size = new Vector2(boxCollider.size.x, boxCollider.size.y * crouchCoefficient);
+            transform.position = new Vector2(transform.position.x, transform.position.y - transform.localScale.y);
         }
         else if (context.phase == InputActionPhase.Canceled)
         {
-            isCrouching = false;
+            if(!isCrouching)
+                return;
+            isCrouching= false;
+            transform.position = new Vector2(transform.position.x, transform.position.y + transform.localScale.y / 2);
             transform.localScale = originalScale;
             boxCollider.size = originalBoxSize;
         }
