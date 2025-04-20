@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     //public PlayerHealth playerHealth;
     private float horizontal;
     private bool facingRight = true;
+    public Animator animator;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
+        animator.SetBool("isJumping", false);
         rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
         if (facingRight && horizontal < 0 || !facingRight && horizontal > 0)
             Flip();
@@ -47,8 +49,12 @@ public class PlayerController : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         if (context.performed && IsGrounded())
+        {
+            animator.SetBool("isJumping", true);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
     }
+
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, .2f, groundLayer);
