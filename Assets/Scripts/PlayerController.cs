@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour
     //public PlayerHealth playerHealth;
     private float horizontal;
     private bool facingRight = true;
+    private BoxCollider2D boxCollider;
+    private Vector3 originalScale;
+    private float crouchCoefficient = 0.5f;
+    
 
     void Start()
     {
@@ -22,6 +26,8 @@ public class PlayerController : MonoBehaviour
         if (hand != null)
             facingRight = transform.position.x < hand.position.x;
         rb = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        originalScale = transform.localScale;
         //playerHealth = GetComponent<PlayerHealth>();
     }
     
@@ -49,6 +55,21 @@ public class PlayerController : MonoBehaviour
         if (context.performed && IsGrounded())
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     }
+
+    public void Crouch(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started && IsGrounded())
+        {
+            transform.localScale = new Vector3(originalScale.x, originalScale.y * crouchCoefficient, originalScale.z);
+            boxCollider.size = new Vector2(boxCollider.size.x, boxCollider.size.y * crouchCoefficient);
+        }
+        else if (context.phase == InputActionPhase.Canceled && IsGrounded())
+        {
+            transform.localScale = originalScale;
+            boxCollider.size = new Vector2(boxCollider.size.x, boxCollider.size.y / crouchCoefficient);
+        }
+    }
+    
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, .2f, groundLayer);
