@@ -14,6 +14,11 @@ public class PlayerController : MonoBehaviour
     //public PlayerHealth playerHealth;
     private float horizontal;
     private bool facingRight = true;
+    private BoxCollider2D boxCollider;
+    private Vector3 originalScale;
+    private float crouchCoefficient = 0.5f;
+    private Vector2 originalBoxSize;
+    private bool isCrouching = false;
 
     void Start()
     {
@@ -22,6 +27,9 @@ public class PlayerController : MonoBehaviour
         if (hand != null)
             facingRight = transform.position.x < hand.position.x;
         rb = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        originalScale = transform.localScale;
+        originalBoxSize = boxCollider.size;
         //playerHealth = GetComponent<PlayerHealth>();
     }
     
@@ -46,9 +54,30 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && IsGrounded())
+        if (context.performed && IsGrounded() && !isCrouching)
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     }
+
+    public void Crouch(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started && IsGrounded())
+        {
+            isCrouching = true;
+            transform.localScale = new Vector3(originalScale.x, originalScale.y * crouchCoefficient, originalScale.z);
+            boxCollider.size = new Vector2(boxCollider.size.x, boxCollider.size.y * crouchCoefficient);
+            transform.position = new Vector2(transform.position.x, transform.position.y - transform.localScale.y);
+        }
+        else if (context.phase == InputActionPhase.Canceled)
+        {
+            if(!isCrouching)
+                return;
+            isCrouching= false;
+            transform.position = new Vector2(transform.position.x, transform.position.y + transform.localScale.y / 2);
+            transform.localScale = originalScale;
+            boxCollider.size = originalBoxSize;
+        }
+    }
+    
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, .2f, groundLayer);
