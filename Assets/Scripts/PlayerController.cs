@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private BoxCollider2D boxCollider;
     private Vector3 originalScale;
     private float crouchCoefficient = 0.5f;
-    
+    private Vector2 originalBoxSize;
 
     void Start()
     {
@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         originalScale = transform.localScale;
+        originalBoxSize = boxCollider.size;
         //playerHealth = GetComponent<PlayerHealth>();
     }
     
@@ -63,10 +64,10 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(originalScale.x, originalScale.y * crouchCoefficient, originalScale.z);
             boxCollider.size = new Vector2(boxCollider.size.x, boxCollider.size.y * crouchCoefficient);
         }
-        else if (context.phase == InputActionPhase.Canceled && IsGrounded())
+        else if (context.phase == InputActionPhase.Canceled)
         {
             transform.localScale = originalScale;
-            boxCollider.size = new Vector2(boxCollider.size.x, boxCollider.size.y / crouchCoefficient);
+            boxCollider.size = originalBoxSize;
         }
     }
     
