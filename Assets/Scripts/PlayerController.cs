@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 originalScale;
     private float crouchCoefficient = 0.5f;
     private Vector2 originalBoxSize;
+    private bool isCrouching = false;
 
     void Start()
     {
@@ -53,7 +54,7 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && IsGrounded())
+        if (context.performed && IsGrounded() && !isCrouching)
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     }
 
@@ -61,11 +62,13 @@ public class PlayerController : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started && IsGrounded())
         {
+            isCrouching = true;
             transform.localScale = new Vector3(originalScale.x, originalScale.y * crouchCoefficient, originalScale.z);
             boxCollider.size = new Vector2(boxCollider.size.x, boxCollider.size.y * crouchCoefficient);
         }
         else if (context.phase == InputActionPhase.Canceled)
         {
+            isCrouching = false;
             transform.localScale = originalScale;
             boxCollider.size = originalBoxSize;
         }
