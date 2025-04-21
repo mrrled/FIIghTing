@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
+    public Transform hand;
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
     public LayerMask groundLayer;
@@ -22,8 +23,6 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        var hand = GetComponentsInChildren<Transform>()
-            .FirstOrDefault(x => Math.Abs(x.position.x - transform.position.x) > 1e-9);
         if (hand != null)
             facingRight = transform.position.x < hand.position.x;
         rb = GetComponent<Rigidbody2D>();
