@@ -18,7 +18,7 @@ public class Hurtbox : MonoBehaviour
         Debug.Log(gameObject.transform.parent.name + " получил " + damage + " урона!");
         currentHealth -= damage;
         currentHealth = Math.Max(0f, currentHealth - damage);
-        healthBar.fillAmount -= damage / maxHealth;
+        healthBar.fillAmount = currentHealth / maxHealth;
         if (currentHealth <= 1e-10)
             Die();
     }
