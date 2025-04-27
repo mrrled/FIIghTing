@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a68c31f8496ff114a9e95b6c646089f6, type: 3}
+  m_Name: CharacterDataBase 2
+  m_EditorClassIdentifier: 
+  character:
+  - characterName: Red2
+    characterPrefab: {fileID: 6123156811246472221, guid: 9db4660e5f388df4bb7e7209a26b3cf5, type: 3}
+    characterPreview: {fileID: 8166710274925509176, guid: 50eb15dded7f96b40b26f55e3c57b313, type: 3}
+  - characterName: Green2
+    characterPrefab: {fileID: 4843145367620143159, guid: d7e531aadd383f442a641fdbd154202c, type: 3}
+    characterPreview: {fileID: -6099873399732076034, guid: 5b053873dee7e6842bc33cf4ff15e25d, type: 3}
