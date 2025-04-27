@@ -1,0 +1,255 @@
+fileFormatVersion: 2
+guid: 151fc73fcdd7c244aa5bd9dcbb18b16c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1204038868830508830
+    second: FiightingStartExit_0
+  - first:
+      213: -3051492548826121312
+    second: FiightingStartExit_1
+  - first:
+      213: 2563286575966018130
+    second: FiightingStartExit_2
+  - first:
+      213: 1015010907287224128
+    second: FiightingStartExit_3
+  - first:
+      213: -3984671320933292985
+    second: FiightingStartExit_4
+  - first:
+      213: -2188521261995275344
+    second: FiightingStartExit_5
+  - first:
+      213: -7919630893239102332
+    second: FiightingStartExit_6
+  - first:
+      213: 8920662857326926885
+    second: FiightingStartExit_7
+  - first:
+      213: -1563850387976245667
+    second: FiightingStartExit_8
+  - first:
+      213: -4146141942607258911
+    second: FiightingStartExit_9
+  - first:
+      213: 4835627499926368910
+    second: FiightingStartExit_10
+  - first:
+      213: 5559189751312505748
+    second: FiightingStartExit_11
+  - first:
+      213: -7690148694969781126
+    second: FiightingStartExit_12
+  - first:
+      213: 1577578419673343070
+    second: FiightingStartExit_13
+  - first:
+      213: -2364473269146653443
+    second: FiightingStartExit_14
+  - first:
+      213: 2572394742365989879
+    second: FiightingStartExit_15
+  - first:
+      213: 8910386360531685973
+    second: FiightingStartExit_16
+  - first:
+      213: -5985540615848554978
+    second: FiightingStartExit_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FiightingStartExit_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 139
+        width: 225
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e17d760d8fa95b010800000000000000
+      internalID: 1204038868830508830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FiightingStartExit_8
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 94
+        width: 180
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ea1d69b561c4ae0800000000000000
+      internalID: -1563850387976245667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FiightingStartExit_13
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 56
+        width: 145
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e54a3fdd63fa4e510800000000000000
+      internalID: 1577578419673343070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cfcc3f4b6b1277c4182867756c27345b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FiightingStartExit_0: 1204038868830508830
+      FiightingStartExit_1: -3051492548826121312
+      FiightingStartExit_10: 4835627499926368910
+      FiightingStartExit_11: 5559189751312505748
+      FiightingStartExit_12: -7690148694969781126
+      FiightingStartExit_13: 1577578419673343070
+      FiightingStartExit_14: -2364473269146653443
+      FiightingStartExit_15: 2572394742365989879
+      FiightingStartExit_16: 8910386360531685973
+      FiightingStartExit_17: -5985540615848554978
+      FiightingStartExit_2: 2563286575966018130
+      FiightingStartExit_3: 1015010907287224128
+      FiightingStartExit_4: -3984671320933292985
+      FiightingStartExit_5: -2188521261995275344
+      FiightingStartExit_6: -7919630893239102332
+      FiightingStartExit_7: 8920662857326926885
+      FiightingStartExit_8: -1563850387976245667
+      FiightingStartExit_9: -4146141942607258911
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
