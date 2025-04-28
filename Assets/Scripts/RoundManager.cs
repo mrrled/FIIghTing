@@ -12,10 +12,6 @@ public class RoundManager : MonoBehaviour
     private Hurtbox _hurtboxPlayer1;
     private Hurtbox _hurtboxPlayer2;
 
-    private int _currentRound = 1;
-
-    public int[] score = {0, 0};
-
     void Start()
     {
         _hurtboxPlayer1 = player1.GetComponent<Hurtbox>();
@@ -26,15 +22,11 @@ public class RoundManager : MonoBehaviour
     {
         if (_hurtboxPlayer1.currentHealth <= 1e-10)
         {
-            _currentRound++;
-            score[1]++;
             StartCoroutine(ChangeRound(1));
             _hurtboxPlayer1.currentHealth = 100f;
         }
         else if (_hurtboxPlayer2.currentHealth <= 1e-10)
         {
-            _currentRound++;
-            score[0]++;
             StartCoroutine(ChangeRound(0));
             _hurtboxPlayer2.currentHealth = 100f;
         }
@@ -45,12 +37,13 @@ public class RoundManager : MonoBehaviour
     private IEnumerator ChangeRound(int winner)
     {
         // Здесь можно добавить анимацию или другие эффекты для смены раунда
-        Debug.Log("Round " + _currentRound + " ended.");
-        
-        // _currentRound++;
-        // score[winner]++;
-        Debug.Log("Starting Round " + _currentRound);
-        Debug.Log($"Score: {score[0]} - {score[1]}");
+        var roundNumber = PlayerPrefs.GetInt("roundNumber", 1);
+        Debug.Log("Round " + roundNumber + " ended.");
+        PlayerPrefs.SetInt("roundNumber", roundNumber + 1);
+        Debug.Log("Starting Round " + (roundNumber + 1) + " ended.");
+        PlayerPrefs.SetInt($"score{winner}", PlayerPrefs.GetInt($"score{winner}", 0) + 1);
+        var (score0, score1) = (PlayerPrefs.GetInt("score0", 0), PlayerPrefs.GetInt("score1", 0));
+        Debug.Log($"Score: {score0} - {score1}");
         yield return new WaitForSeconds(1f); // Задержка перед началом нового раунда
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
