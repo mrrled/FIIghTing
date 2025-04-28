@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class RoundManager : MonoBehaviour
@@ -25,11 +26,17 @@ public class RoundManager : MonoBehaviour
     {
         if (_hurtboxPlayer1.currentHealth <= 1e-10)
         {
+            _currentRound++;
+            score[1]++;
             StartCoroutine(ChangeRound(1));
+            _hurtboxPlayer1.currentHealth = 100f;
         }
         else if (_hurtboxPlayer2.currentHealth <= 1e-10)
         {
+            _currentRound++;
+            score[0]++;
             StartCoroutine(ChangeRound(0));
+            _hurtboxPlayer2.currentHealth = 100f;
         }
         
     }
@@ -39,16 +46,12 @@ public class RoundManager : MonoBehaviour
     {
         // Здесь можно добавить анимацию или другие эффекты для смены раунда
         Debug.Log("Round " + _currentRound + " ended.");
-
-        // Восстановление здоровья игроков
-        _hurtboxPlayer1.currentHealth = _hurtboxPlayer1.maxHealth;
-        _hurtboxPlayer2.currentHealth = _hurtboxPlayer2.maxHealth;
-        _hurtboxPlayer1.healthBar.fillAmount = 1;
-        _hurtboxPlayer2.healthBar.fillAmount = 1;
-        _currentRound++;
-        score[winner]++;
+        
+        // _currentRound++;
+        // score[winner]++;
         Debug.Log("Starting Round " + _currentRound);
         Debug.Log($"Score: {score[0]} - {score[1]}");
-        yield return new WaitForSeconds(5f); // Задержка перед началом нового раунда
+        yield return new WaitForSeconds(1f); // Задержка перед началом нового раунда
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
