@@ -4,13 +4,15 @@ using UnityEngine.SceneManagement;
 
 public class RoundManager : MonoBehaviour
 {
-    public GameObject player1;
-    public GameObject player2;
+    private GameObject player1;
+    private GameObject player2;
     private Hurtbox _hurtboxPlayer1;
     private Hurtbox _hurtboxPlayer2;
 
     void Start()
     {
+        player1 = GameObject.Find("Player1");
+        player2 = GameObject.Find("Player2");
         _hurtboxPlayer1 = player1.GetComponent<Hurtbox>();
         _hurtboxPlayer2 = player2.GetComponent<Hurtbox>();
     }
