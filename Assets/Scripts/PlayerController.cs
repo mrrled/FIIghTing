@@ -37,8 +37,8 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool("isJumping", false);
         rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
-        if (facingRight && horizontal < 0 || !facingRight && horizontal > 0)
-            Flip();
+        // if (facingRight && horizontal < 0 || !facingRight && horizontal > 0)
+        //     Flip();
     }
 
     private void Flip()

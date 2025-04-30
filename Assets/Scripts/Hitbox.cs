@@ -17,8 +17,8 @@ public class Hitbox : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Hurtbox"))
         {
-            if (collision.transform.root.gameObject == owner) return;
-
+            if (collision.transform.root.gameObject == owner)
+                return;
             Hurtbox hurtbox = collision.GetComponent<Hurtbox>();
             if (hurtbox != null)
             {
