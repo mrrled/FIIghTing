@@ -5,7 +5,7 @@ public class CharacterLoader : MonoBehaviour
     public CharacterDataBase characterDatabase1;
     public CharacterDataBase characterDatabase2;
 
-    void Start()
+    void Awake()
     {
         LoadCharacter(1);
         LoadCharacter(2);

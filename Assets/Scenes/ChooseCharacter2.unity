@@ -788,7 +788,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -928,8 +928,8 @@ Transform:
   m_GameObject: {fileID: 1006880951}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 638, y: 344, z: 0}
-  m_LocalScale: {x: 59.010902, y: 59.010902, z: 59.010902}
+  m_LocalPosition: {x: 646, y: 316, z: 0}
+  m_LocalScale: {x: 33.99501, y: 33.99501, z: 33.99501}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

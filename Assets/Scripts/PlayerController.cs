@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 7f;
     public LayerMask groundLayer;
     public Transform groundCheck;
-    //public PlayerHealth playerHealth;
     private float horizontal;
     private bool facingRight = true;
     private BoxCollider2D boxCollider;
@@ -24,13 +23,12 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        if (hand != null)
-            facingRight = transform.position.x < hand.position.x;
+        // if (hand != null)
+        //     facingRight = transform.position.x < hand.position.x;
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         originalScale = transform.localScale;
         originalBoxSize = boxCollider.size;
-        //playerHealth = GetComponent<PlayerHealth>();
     }
     
     private void FixedUpdate()
