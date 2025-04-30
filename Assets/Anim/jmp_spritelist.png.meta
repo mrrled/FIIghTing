@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 1305220de3cfbfb48b2f97eda682fe48
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7618328022663963077
+    second: jmp_spritelist_0
+  - first:
+      213: -3683127818945866023
+    second: jmp_spritelist_1
+  - first:
+      213: 692529492515729809
+    second: jmp_spritelist_2
+  - first:
+      213: 845119181456841726
+    second: jmp_spritelist_3
+  - first:
+      213: 4649224757546241211
+    second: jmp_spritelist_4
+  - first:
+      213: 4733574471837133187
+    second: jmp_spritelist_5
+  - first:
+      213: -6565404848929729808
+    second: jmp_spritelist_6
+  - first:
+      213: 5767753417342905783
+    second: jmp_spritelist_7
+  - first:
+      213: -4668130301972159730
+    second: jmp_spritelist_8
+  - first:
+      213: 6133839408648839592
+    second: jmp_spritelist_9
+  - first:
+      213: -6260775993307520034
+    second: jmp_spritelist_10
+  - first:
+      213: -4308003157876119712
+    second: jmp_spritelist_11
+  - first:
+      213: -6191096798181852900
+    second: jmp_spritelist_12
+  - first:
+      213: -676946075330654892
+    second: jmp_spritelist_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jmp_spritelist_0
+      rect:
+        serializedVersion: 2
+        x: 2003
+        y: 1469
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3ed5bae603464690800000000000000
+      internalID: -7618328022663963077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jmp_spritelist_1
+      rect:
+        serializedVersion: 2
+        x: 2651
+        y: 35
+        width: 554
+        height: 1460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d65f5143c6e2ecc0800000000000000
+      internalID: -3683127818945866023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jmp_spritelist_2
+      rect:
+        serializedVersion: 2
+        x: 6893
+        y: 23
+        width: 554
+        height: 1460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 191b1ed77eb5c9900800000000000000
+      internalID: 692529492515729809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jmp_spritelist_3
+      rect:
+        serializedVersion: 2
+        x: 8309
+        y: 1457
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efb9a9bfa677abb00800000000000000
+      internalID: 845119181456841726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jmp_spritelist_4
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 29
+        width: 692
+        height: 1430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbcce7ac84d558040800000000000000
+      internalID: 4649224757546241211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jmp_spritelist_5
+      rect:
+        serializedVersion: 2
+        x: 5093
+        y: 1433
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 389a5bf07e801b140800000000000000
+      internalID: 4733574471837133187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jmp_spritelist_6
+      rect:
+        serializedVersion: 2
+        x: 6179
+        y: 1445
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f29aec231ff2e4a0800000000000000
+      internalID: -6565404848929729808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jmp_spritelist_7
+      rect:
+        serializedVersion: 2
+        x: 8951
+        y: 29
+        width: 692
+        height: 1430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bde4c89c2d2b0050800000000000000
+      internalID: 5767753417342905783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jmp_spritelist_8
+      rect:
+        serializedVersion: 2
+        x: 3947
+        y: 1415
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0366b12938773fb0800000000000000
+      internalID: -4668130301972159730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jmp_spritelist_9
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 65
+        width: 764
+        height: 1244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a16ec59176cf1550800000000000000
+      internalID: 6133839408648839592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jmp_spritelist_10
+      rect:
+        serializedVersion: 2
+        x: 3539
+        y: 101
+        width: 776
+        height: 1220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3ac94b7614d19a0800000000000000
+      internalID: -6260775993307520034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jmp_spritelist_11
+      rect:
+        serializedVersion: 2
+        x: 4673
+        y: 329
+        width: 752
+        height: 962
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0676883e3f5e634c0800000000000000
+      internalID: -4308003157876119712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jmp_spritelist_12
+      rect:
+        serializedVersion: 2
+        x: 5771
+        y: 131
+        width: 776
+        height: 1220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19ff4e834ec41aa0800000000000000
+      internalID: -6191096798181852900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jmp_spritelist_13
+      rect:
+        serializedVersion: 2
+        x: 7817
+        y: 53
+        width: 764
+        height: 1244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45d42df81210b96f0800000000000000
+      internalID: -676946075330654892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      jmp_spritelist_0: -7618328022663963077
+      jmp_spritelist_1: -3683127818945866023
+      jmp_spritelist_10: -6260775993307520034
+      jmp_spritelist_11: -4308003157876119712
+      jmp_spritelist_12: -6191096798181852900
+      jmp_spritelist_13: -676946075330654892
+      jmp_spritelist_2: 692529492515729809
+      jmp_spritelist_3: 845119181456841726
+      jmp_spritelist_4: 4649224757546241211
+      jmp_spritelist_5: 4733574471837133187
+      jmp_spritelist_6: -6565404848929729808
+      jmp_spritelist_7: 5767753417342905783
+      jmp_spritelist_8: -4668130301972159730
+      jmp_spritelist_9: 6133839408648839592
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

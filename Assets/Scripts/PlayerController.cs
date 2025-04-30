@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private float crouchCoefficient = 0.5f;
     private Vector2 originalBoxSize;
     private bool isCrouching = false;
+    public Animator animator;
 
     void Start()
     {
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
+        animator.SetBool("isJumping", false);
         rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
         if (facingRight && horizontal < 0 || !facingRight && horizontal > 0)
             Flip();
@@ -54,7 +56,10 @@ public class PlayerController : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         if (context.performed && IsGrounded() && !isCrouching)
+        {
+            animator.SetBool("isJumping", true);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
     }
 
     public void Crouch(InputAction.CallbackContext context)
