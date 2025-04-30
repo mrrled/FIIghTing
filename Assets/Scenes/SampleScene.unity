@@ -979,7 +979,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 0000000075b7faa6
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1786,7 +1786,7 @@ Transform:
   m_GameObject: {fileID: 1019975493}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.1065, y: -1.8087, z: 0}
+  m_LocalPosition: {x: 3.1065, y: -1.48, z: 0}
   m_LocalScale: {x: 1.6671, y: 4.1052337, z: 1.6671}
   m_ConstrainProportionsScale: 0
   m_Children:
