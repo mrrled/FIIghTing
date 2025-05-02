@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -37,17 +38,24 @@ public class RoundManager : MonoBehaviour
         PlayerPrefs.SetInt("roundNumber", roundNumber + 1);
         PlayerPrefs.SetInt($"score{winner}", PlayerPrefs.GetInt($"score{winner}", 0) + 1);
         
-        ChangeRoundLog(roundNumber);
+        var (score0, score1) = (PlayerPrefs.GetInt("score0", 0), PlayerPrefs.GetInt("score1", 0));
+        ChangeRoundLog(roundNumber, score0, score1);
         
         yield return new WaitForSeconds(1f); // Задержка перед началом нового раунда
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        LoadNextScene(score0, score1);
     }
 
-    private static void ChangeRoundLog(int roundNumber)
+    private static void ChangeRoundLog(int roundNumber, int score0, int score1)
     {
-        var (score0, score1) = (PlayerPrefs.GetInt("score0", 0), PlayerPrefs.GetInt("score1", 0));
         Debug.Log("Round " + roundNumber + " ended.");
         Debug.Log("Starting Round " + (roundNumber + 1) + " ended.");
         Debug.Log($"Score: {score0} - {score1}");
+    }
+
+    private static void LoadNextScene(int score0, int score1)
+    {
+        SceneManager.LoadScene((score0 >= 2 || score1 >= 2)
+            ? 4 // TODO: Придумать как избавиться от хардкода
+            : SceneManager.GetActiveScene().buildIndex);
     }
 }
