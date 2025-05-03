@@ -8,53 +8,46 @@ public class CharacterSelector : MonoBehaviour
     public SpriteRenderer sprite;
     public int numPlayer;
     
-    private int selectedCharacter;
+    private int _selectedCharacter;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (!PlayerPrefs.HasKey($"selectedCharacter{numPlayer}"))
-        {
-            selectedCharacter = 0;
-        }
-        else
-        {
-            Load();
-        }
+        _selectedCharacter = !PlayerPrefs.HasKey($"selectedCharacter{numPlayer}") 
+            ? 0 
+            : PlayerPrefs.GetInt($"selectedCharacter{numPlayer}", _selectedCharacter);
         UpdateCharacter();
     }
 
     public void NextCharacter()
     {
-        selectedCharacter++;
-        if (selectedCharacter >= db.CharacterCount)
-            selectedCharacter = 0;
+        _selectedCharacter = (_selectedCharacter >= db.CharacterCount - 1)
+            ? 0
+            : _selectedCharacter + 1;
+        _selectedCharacter++;
+        // if (_selectedCharacter >= db.CharacterCount)
+        //     _selectedCharacter = 0;
         UpdateCharacter();
         Save();
     }
 
     public void PreviousCharacter()
     {
-        selectedCharacter--;
-        if (selectedCharacter < 0)
-            selectedCharacter = db.CharacterCount - 1;
+        _selectedCharacter = (_selectedCharacter <= 0)
+            ? db.CharacterCount - 1
+            : _selectedCharacter - 1;
         UpdateCharacter();
         Save();
     }
 
     private void UpdateCharacter()
     {
-        CharacterData character = db.GetCharacter(selectedCharacter);
+        var character = db.GetCharacter(_selectedCharacter);
         sprite.sprite = character.characterPreview;
-    }
-
-    private void Load()
-    {
-        selectedCharacter = PlayerPrefs.GetInt($"selectedCharacter{numPlayer}", selectedCharacter);
     }
 
     private void Save()
     {
-        PlayerPrefs.SetInt($"selectedCharacter{numPlayer}", selectedCharacter);
+        PlayerPrefs.SetInt($"selectedCharacter{numPlayer}", _selectedCharacter);
     }
 
     public void ChangeScene(int id)

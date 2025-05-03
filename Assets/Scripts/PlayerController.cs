@@ -1,82 +1,79 @@
-using System;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    private static readonly int IsJumping = Animator.StringToHash("isJumping");
+    private Rigidbody2D _rb;
     public Transform hand;
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
     public LayerMask groundLayer;
     public Transform groundCheck;
-    private float horizontal;
-    private bool facingRight = true;
-    private BoxCollider2D boxCollider;
-    private Vector3 originalScale;
-    private float crouchCoefficient = 0.5f;
-    private Vector2 originalBoxSize;
-    private bool isCrouching = false;
+    private float _horizontal;
+    private bool _facingRight = true;
+    private BoxCollider2D _boxCollider;
+    private Vector3 _originalScale;
+    private const float CrouchCoefficient = 0.5f;
+    private Vector2 _originalBoxSize;
+    private bool _isCrouching;
     public Animator animator;
 
     void Start()
     {
         // if (hand != null)
         //     facingRight = transform.position.x < hand.position.x;
-        rb = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
-        originalScale = transform.localScale;
-        originalBoxSize = boxCollider.size;
+        _rb = GetComponent<Rigidbody2D>();
+        _boxCollider = GetComponent<BoxCollider2D>();
+        _originalScale = transform.localScale;
+        _originalBoxSize = _boxCollider.size;
     }
     
     private void FixedUpdate()
     {
-        animator.SetBool("isJumping", false);
-        rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
+        animator.SetBool(IsJumping, false);
+        _rb.linearVelocity = new Vector2(_horizontal * moveSpeed, _rb.linearVelocity.y);
         // if (facingRight && horizontal < 0 || !facingRight && horizontal > 0)
         //     Flip();
     }
 
     private void Flip()
     {
-        facingRight = !facingRight;
-        Vector3 scaler = transform.localScale;
+        _facingRight = !_facingRight;
+        var scaler = transform.localScale;
         scaler.x *= -1;
         transform.localScale = scaler;
     }
     public void Move(InputAction.CallbackContext context)
     {
-        horizontal = context.ReadValue<Vector2>().x;
+        _horizontal = context.ReadValue<Vector2>().x;
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && IsGrounded() && !isCrouching)
-        {
-            animator.SetBool("isJumping", true);
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-        }
+        if (!context.performed || !IsGrounded() || _isCrouching) return;
+        animator.SetBool(IsJumping, true);
+        _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
     }
 
     public void Crouch(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Started && IsGrounded())
+        switch (context.phase)
         {
-            isCrouching = true;
-            transform.localScale = new Vector3(originalScale.x, originalScale.y * crouchCoefficient, originalScale.z);
-            boxCollider.size = new Vector2(boxCollider.size.x, boxCollider.size.y * crouchCoefficient);
-            transform.position = new Vector2(transform.position.x, transform.position.y - transform.localScale.y);
-        }
-        else if (context.phase == InputActionPhase.Canceled)
-        {
-            if(!isCrouching)
+            case InputActionPhase.Started when IsGrounded():
+                _isCrouching = true;
+                transform.localScale = new Vector3(_originalScale.x, _originalScale.y * CrouchCoefficient, _originalScale.z);
+                _boxCollider.size = new Vector2(_boxCollider.size.x, _boxCollider.size.y * CrouchCoefficient);
+                transform.position = new Vector2(transform.position.x, transform.position.y - transform.localScale.y);
+                break;
+            case InputActionPhase.Canceled when !_isCrouching:
                 return;
-            isCrouching= false;
-            transform.position = new Vector2(transform.position.x, transform.position.y + transform.localScale.y / 2);
-            transform.localScale = originalScale;
-            boxCollider.size = originalBoxSize;
+            case InputActionPhase.Canceled:
+                _isCrouching= false;
+                transform.position = new Vector2(transform.position.x, transform.position.y + transform.localScale.y / 2);
+                transform.localScale = _originalScale;
+                _boxCollider.size = _originalBoxSize;
+                break;
         }
     }
     

@@ -15,15 +15,10 @@ public class Hitbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Hurtbox"))
-        {
-            if (collision.transform.root.gameObject == owner)
-                return;
-            Hurtbox hurtbox = collision.GetComponent<Hurtbox>();
-            if (hurtbox != null)
-            {
-                hurtbox.TakeDamage(damage); 
-            }
-        }
+        if (collision.gameObject.layer != LayerMask.NameToLayer("Hurtbox")) return;
+        if (collision.transform.root.gameObject == owner)
+            return;
+        var hurtbox = collision.GetComponent<Hurtbox>();
+        hurtbox?.TakeDamage(damage);
     }
 }

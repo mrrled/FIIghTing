@@ -14,8 +14,9 @@ public class CharacterLoader : MonoBehaviour
     private void LoadCharacter(int num)
     {
         var index = PlayerPrefs.GetInt($"selectedCharacter{num}");
-        CharacterData character =
-            num == 1 ? characterDatabase1.GetCharacter(index) : characterDatabase2.GetCharacter(index);
+        var character = num == 1 
+            ? characterDatabase1.GetCharacter(index) 
+            : characterDatabase2.GetCharacter(index);
         GameObject characterInstance = Instantiate(character.characterPrefab);
     }
 }

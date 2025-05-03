@@ -19,13 +19,5 @@ public class Hurtbox : MonoBehaviour
         currentHealth -= damage;
         currentHealth = Math.Max(0f, currentHealth - damage);
         healthBar.fillAmount = currentHealth / maxHealth;
-        if (currentHealth <= 1e-10)
-            Die();
-    }
-
-    void Die()
-    {
-        //exit or new round
-        Debug.Log("Player died");
     }
 }

@@ -18,14 +18,12 @@ public class Attack : MonoBehaviour
 
     public void Attacking(InputAction.CallbackContext context)
     {
-        if (context.performed)
-        {
-            existingHitboxObject.transform.position = attackPoint.position;
-            existingHitboxObject.transform.rotation = attackPoint.rotation;
-            ActivateHitbox();
-            animator.SetTrigger(animationTrigger);
-            Invoke("DeactivateHitbox", attackDuration);
-        }
+        if (!context.performed) return;
+        existingHitboxObject.transform.position = attackPoint.position;
+        existingHitboxObject.transform.rotation = attackPoint.rotation;
+        ActivateHitbox();
+        animator.SetTrigger(animationTrigger);
+        Invoke(nameof(DeactivateHitbox), attackDuration);
     }
 
     void ActivateHitbox()

@@ -6,25 +6,25 @@ public class HurtboxVisualizer : MonoBehaviour
     public Color gizmoColor = Color.red; // Красный контур
     [Range(1, 5)] public float lineThickness = 2f;
 
-    private Collider2D col;
+    private Collider2D _col;
 
     private void Awake()
     {
-        col = GetComponent<Collider2D>();
+        _col = GetComponent<Collider2D>();
     }
 
     private void OnDrawGizmos()
     {
-        if (col == null)
+        if (_col is null)
         {
-            col = GetComponent<Collider2D>();
-            if (col == null) return;
+            _col = GetComponent<Collider2D>();
+            if (_col is null) return;
         }
 
         Gizmos.color = gizmoColor;
 
         // Сохраняем оригинальную матрицу
-        Matrix4x4 originalMatrix = Gizmos.matrix;
+        var originalMatrix = Gizmos.matrix;
 
         // Устанавливаем матрицу трансформации объекта
         Gizmos.matrix = Matrix4x4.TRS(
@@ -34,7 +34,7 @@ public class HurtboxVisualizer : MonoBehaviour
         );
 
         // Отрисовка в зависимости от типа коллайдера
-        switch (col)
+        switch (_col)
         {
             case BoxCollider2D box:
                 DrawWireBox(box.offset, box.size);
@@ -51,16 +51,16 @@ public class HurtboxVisualizer : MonoBehaviour
 
     private void DrawWireBox(Vector2 offset, Vector2 size)
     {
-        Vector2 halfSize = size * 0.5f;
+        var halfSize = size * 0.5f;
         Vector3 p1 = offset + new Vector2(-halfSize.x, -halfSize.y);
         Vector3 p2 = offset + new Vector2(halfSize.x, -halfSize.y);
         Vector3 p3 = offset + new Vector2(halfSize.x, halfSize.y);
         Vector3 p4 = offset + new Vector2(-halfSize.x, halfSize.y);
 
         // Утолщенные линии через многократное рисование
-        for (int i = 0; i < lineThickness; i++)
+        for (var i = 0; i < lineThickness; i++)
         {
-            float offsetAmount = i * 0.01f;
+            var offsetAmount = i * 0.01f;
             Gizmos.DrawLine(p1 + Vector3.one * offsetAmount, p2 + Vector3.one * offsetAmount);
             Gizmos.DrawLine(p2 + Vector3.one * offsetAmount, p3 + Vector3.one * offsetAmount);
             Gizmos.DrawLine(p3 + Vector3.one * offsetAmount, p4 + Vector3.one * offsetAmount);
@@ -70,18 +70,18 @@ public class HurtboxVisualizer : MonoBehaviour
 
     private void DrawWireCircle(Vector2 offset, float radius)
     {
-        int segments = 20;
+        var segments = 20;
         Vector3 lastPoint = offset + Vector2.right * radius;
 
-        for (int i = 1; i <= segments; i++)
+        for (var i = 1; i <= segments; i++)
         {
-            float angle = i * Mathf.PI * 2 / segments;
+            var angle = i * Mathf.PI * 2 / segments;
             Vector3 nextPoint = offset + new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * radius;
 
             // Утолщенные линии
-            for (int j = 0; j < lineThickness; j++)
+            for (var j = 0; j < lineThickness; j++)
             {
-                float offsetAmount = j * 0.01f;
+                var offsetAmount = j * 0.01f;
                 Gizmos.DrawLine(
                     lastPoint + Vector3.one * offsetAmount,
                     nextPoint + Vector3.one * offsetAmount
