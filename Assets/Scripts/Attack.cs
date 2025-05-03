@@ -5,11 +5,9 @@ public class Attack : MonoBehaviour
 {
     public Transform attackPoint;
     public Animator animator;
-    
     public GameObject existingHitboxObject;
-
     public string animationTrigger = "Attack";
-    public float attackDuration = 0.5f;
+    public float attackDuration = 2f;
 
     void Start()
     {

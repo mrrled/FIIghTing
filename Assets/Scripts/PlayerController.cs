@@ -28,22 +28,13 @@ public class PlayerController : MonoBehaviour
         _originalScale = transform.localScale;
         _originalBoxSize = _boxCollider.size;
     }
-    
+
     private void FixedUpdate()
     {
         animator.SetBool(IsJumping, false);
-        _rb.linearVelocity = new Vector2(_horizontal * moveSpeed, _rb.linearVelocity.y);
-        // if (facingRight && horizontal < 0 || !facingRight && horizontal > 0)
-        //     Flip();
+        rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
     }
 
-    private void Flip()
-    {
-        _facingRight = !_facingRight;
-        var scaler = transform.localScale;
-        scaler.x *= -1;
-        transform.localScale = scaler;
-    }
     public void Move(InputAction.CallbackContext context)
     {
         _horizontal = context.ReadValue<Vector2>().x;

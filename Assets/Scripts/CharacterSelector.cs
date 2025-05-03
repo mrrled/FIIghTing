@@ -4,17 +4,13 @@ using UnityEngine.SceneManagement;
 public class CharacterSelector : MonoBehaviour
 {
     public CharacterDataBase db;
-
     public SpriteRenderer sprite;
     public int numPlayer;
     
-    private int _selectedCharacter;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private int selectedCharacter;
     void Start()
     {
-        _selectedCharacter = !PlayerPrefs.HasKey($"selectedCharacter{numPlayer}") 
-            ? 0 
-            : PlayerPrefs.GetInt($"selectedCharacter{numPlayer}", _selectedCharacter);
+        selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", 0);
         UpdateCharacter();
     }
 
