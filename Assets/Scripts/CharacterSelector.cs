@@ -4,22 +4,13 @@ using UnityEngine.SceneManagement;
 public class CharacterSelector : MonoBehaviour
 {
     public CharacterDataBase db;
-
     public SpriteRenderer sprite;
     public int numPlayer;
     
     private int selectedCharacter;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (!PlayerPrefs.HasKey($"selectedCharacter{numPlayer}"))
-        {
-            selectedCharacter = 0;
-        }
-        else
-        {
-            Load();
-        }
+        selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", 0);
         UpdateCharacter();
     }
 
@@ -45,11 +36,6 @@ public class CharacterSelector : MonoBehaviour
     {
         CharacterData character = db.GetCharacter(selectedCharacter);
         sprite.sprite = character.characterPreview;
-    }
-
-    private void Load()
-    {
-        selectedCharacter = PlayerPrefs.GetInt($"selectedCharacter{numPlayer}", selectedCharacter);
     }
 
     private void Save()

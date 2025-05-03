@@ -6,46 +6,34 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    public Transform hand;
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
     public LayerMask groundLayer;
     public Transform groundCheck;
+    public Animator animator;
+    
+    private Rigidbody2D rb;
     private float horizontal;
-    private bool facingRight = true;
     private BoxCollider2D boxCollider;
     private Vector3 originalScale;
     private float crouchCoefficient = 0.5f;
     private Vector2 originalBoxSize;
-    private bool isCrouching = false;
-    public Animator animator;
+    private bool isCrouching;
 
     void Start()
     {
-        // if (hand != null)
-        //     facingRight = transform.position.x < hand.position.x;
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         originalScale = transform.localScale;
         originalBoxSize = boxCollider.size;
     }
-    
+
     private void FixedUpdate()
     {
         animator.SetBool("isJumping", false);
         rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
-        // if (facingRight && horizontal < 0 || !facingRight && horizontal > 0)
-        //     Flip();
     }
 
-    private void Flip()
-    {
-        facingRight = !facingRight;
-        Vector3 scaler = transform.localScale;
-        scaler.x *= -1;
-        transform.localScale = scaler;
-    }
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
