@@ -7,10 +7,7 @@ public class Hitbox : MonoBehaviour
 
     void Start()
     {
-        if (owner == null)
-        {
-            owner = transform.root.gameObject;
-        }
+        owner ??= transform.root.gameObject;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

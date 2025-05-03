@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     public Transform groundCheck;
     private float _horizontal;
-    private bool _facingRight = true;
     private BoxCollider2D _boxCollider;
     private Vector3 _originalScale;
     private const float CrouchCoefficient = 0.5f;
@@ -21,8 +20,6 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        // if (hand != null)
-        //     facingRight = transform.position.x < hand.position.x;
         _rb = GetComponent<Rigidbody2D>();
         _boxCollider = GetComponent<BoxCollider2D>();
         _originalScale = transform.localScale;
@@ -32,7 +29,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         animator.SetBool(IsJumping, false);
-        rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
+        _rb.linearVelocity = new Vector2(_horizontal * moveSpeed, _rb.linearVelocity.y);
     }
 
     public void Move(InputAction.CallbackContext context)

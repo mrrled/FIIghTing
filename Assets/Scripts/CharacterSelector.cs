@@ -7,10 +7,10 @@ public class CharacterSelector : MonoBehaviour
     public SpriteRenderer sprite;
     public int numPlayer;
     
-    private int selectedCharacter;
+    private int _selectedCharacter;
     void Start()
     {
-        selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", 0);
+        _selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", 0);
         UpdateCharacter();
     }
 
@@ -19,9 +19,6 @@ public class CharacterSelector : MonoBehaviour
         _selectedCharacter = (_selectedCharacter >= db.CharacterCount - 1)
             ? 0
             : _selectedCharacter + 1;
-        _selectedCharacter++;
-        // if (_selectedCharacter >= db.CharacterCount)
-        //     _selectedCharacter = 0;
         UpdateCharacter();
         Save();
     }
@@ -43,7 +40,7 @@ public class CharacterSelector : MonoBehaviour
 
     private void Save()
     {
-        PlayerPrefs.SetInt($"selectedCharacter{numPlayer}", _selectedCharacter);
+        PlayerPrefs.SetInt($"SelectedCharacter{numPlayer}", _selectedCharacter);
     }
 
     public void ChangeScene(int id)
