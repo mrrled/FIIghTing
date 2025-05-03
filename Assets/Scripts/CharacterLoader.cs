@@ -13,7 +13,7 @@ public class CharacterLoader : MonoBehaviour
 
     private void LoadCharacter(int num)
     {
-        var index = PlayerPrefs.GetInt($"selectedCharacter{num}");
+        var index = PlayerPrefs.GetInt($"SelectedCharacter{num}");
         var character = num == 1 
             ? characterDatabase1.GetCharacter(index) 
             : characterDatabase2.GetCharacter(index);
