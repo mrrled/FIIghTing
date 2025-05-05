@@ -396,6 +396,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7633899416347995778, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
+      propertyPath: m_TagString
+      value: Hurtbox_Player2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
