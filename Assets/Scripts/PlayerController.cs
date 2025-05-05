@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     private static readonly int IsJumping = Animator.StringToHash("isJumping");
+    private static readonly int IsWalking = Animator.StringToHash("isWalking");
     private Rigidbody2D _rb;
     public Transform hand;
     public float moveSpeed = 5f;
@@ -29,6 +30,10 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         animator.SetBool(IsJumping, false);
+        if(IsGrounded() && _horizontal != 0)
+            animator.SetBool(IsWalking, true);
+        else
+            animator.SetBool(IsWalking, false);
         _rb.linearVelocity = new Vector2(_horizontal * moveSpeed, _rb.linearVelocity.y);
     }
 
