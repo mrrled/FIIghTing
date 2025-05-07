@@ -15,8 +15,20 @@ public class Hurtbox : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        var playerController = gameObject.transform.parent.GetComponent<PlayerController>();
+        if (playerController.isBlocking)
+        {
+            BlockDamage(damage);
+            return;
+        }
         Debug.Log(gameObject.transform.parent.name + " получил " + damage + " урона!");
         currentHealth = Math.Max(0f, currentHealth - damage);
         healthBar.fillAmount = currentHealth / maxHealth;
+    }
+
+    private void BlockDamage(int damage)
+    {
+        //TODO: Сделать стамину и прикрутить сюда
+        return;
     }
 }

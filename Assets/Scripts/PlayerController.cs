@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 _originalBoxSize;
     private bool _isCrouching;
     public Animator animator;
+    public bool isBlocking;
 
     void Start()
     {
@@ -47,6 +48,29 @@ public class PlayerController : MonoBehaviour
         if (!context.performed || !IsGrounded() || _isCrouching) return;
         animator.SetBool(IsJumping, true);
         _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
+    }
+
+    public void Block(InputAction.CallbackContext context)
+    {
+        switch (context.phase)
+        {
+            case InputActionPhase.Started when IsGrounded() && !_isCrouching:
+                isBlocking = true;
+                // TODO: Прикрутить анимацию
+                break;
+            case InputActionPhase.Canceled when !isBlocking:
+                return;
+            case InputActionPhase.Canceled:
+                isBlocking = false;
+                //TODO: Прикрутить Анимацию
+                break;
+            case InputActionPhase.Disabled:
+            case InputActionPhase.Waiting:
+            case InputActionPhase.Performed:
+                break;
+            default:
+                return;
+        }
     }
 
     public void Crouch(InputAction.CallbackContext context)
