@@ -706,6 +706,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: d116e591-9c18-4a59-a2f2-ced9934ba811
     m_ActionName: 'Player/AttackLeg[/Keyboard/u]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5536018074175126489}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Block
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0b555ea2-7f67-4254-8c0c-065de42f6204
+    m_ActionName: 'Player/Block[/Keyboard/m]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -753,6 +769,7 @@ MonoBehaviour:
     m_Bits: 256
   groundCheck: {fileID: 7336396926844333773}
   animator: {fileID: 4393643623322077476}
+  isBlocking: 0
 --- !u!114 &795459768530857693
 MonoBehaviour:
   m_ObjectHideFlags: 0
