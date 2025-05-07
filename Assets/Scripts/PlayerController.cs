@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour
 
     public void Block(InputAction.CallbackContext context)
     {
+        if (animator.GetBool(IsJumping) || animator.GetBool(IsWalking)) //TODO: Прикрутить проверку на удар
+            return;
         switch (context.phase)
         {
             case InputActionPhase.Started when IsGrounded() && !_isCrouching:
