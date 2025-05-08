@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: CharacterDataBase
   m_EditorClassIdentifier: 
   character:
-  - characterName: Blue1
-    characterPrefab: {fileID: 3117265773136885546, guid: 39e64c442fb07434292aaaeda3220b70, type: 3}
+  - characterPrefab: {fileID: 6787746215724718120, guid: e83d907f9abdcc748a73df305b66ff29, type: 3}
     characterPreview: {fileID: -2615874204119335, guid: 793abe8758f77cb41aa1ff1a38396a50, type: 3}
-  - characterName: Red1
-    characterPrefab: {fileID: 6861534333907058427, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
+  - characterPrefab: {fileID: 6861534333907058427, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
     characterPreview: {fileID: 5767753417342905783, guid: 1305220de3cfbfb48b2f97eda682fe48, type: 3}

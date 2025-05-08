@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: CharacterDataBase 2
   m_EditorClassIdentifier: 
   character:
-  - characterPrefab: {fileID: 2845561583089856801, guid: 9db4660e5f388df4bb7e7209a26b3cf5, type: 3}
-    characterPreview: {fileID: 8166710274925509176, guid: 50eb15dded7f96b40b26f55e3c57b313, type: 3}
-  - characterPrefab: {fileID: 4642926292355838563, guid: 677835f92f0454f49a65f3dd3d4976dd, type: 3}
-    characterPreview: {fileID: -6099873399732076034, guid: 5b053873dee7e6842bc33cf4ff15e25d, type: 3}
-  - characterPrefab: {fileID: 2478181252575380140, guid: 4913fdfaf3077974eb9c1bb70e0dcfa1, type: 3}
+  - characterPrefab: {fileID: 5308135882494042180, guid: b0ae8b48d4c953545b202da2b1fb9728, type: 3}
+    characterPreview: {fileID: 7809157847302988670, guid: 1c9f0bc398f2bac478870234c63b00e8, type: 3}
+  - characterPrefab: {fileID: 2478181252575380140, guid: 677835f92f0454f49a65f3dd3d4976dd, type: 3}
     characterPreview: {fileID: -4228536024479518375, guid: 151453708284e954bb21f2181c04d6b9, type: 3}
