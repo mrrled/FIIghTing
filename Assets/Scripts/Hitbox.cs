@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Hitbox : MonoBehaviour
 {
-    public int damage = 10;
+    public float damage = 10;
     public GameObject owner; 
 
     void Start()

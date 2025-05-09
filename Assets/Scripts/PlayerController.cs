@@ -19,9 +19,11 @@ public class PlayerController : MonoBehaviour
     private bool _isCrouching;
     public Animator animator;
     public bool isBlocking;
+    private Hurtbox _hurtbox;
 
     void Start()
     {
+        _hurtbox = gameObject.transform.GetChild(3).GetComponent<Hurtbox>(); //TODO: Убрать хардкод
         _rb = GetComponent<Rigidbody2D>();
         _boxCollider = GetComponent<BoxCollider2D>();
         _originalScale = transform.localScale;
@@ -36,6 +38,7 @@ public class PlayerController : MonoBehaviour
         else
             animator.SetBool(IsWalking, false);
         _rb.linearVelocity = new Vector2(_horizontal * moveSpeed, _rb.linearVelocity.y);
+        _hurtbox.currentStamina += 0.25f;
     }
 
     public void Move(InputAction.CallbackContext context)
