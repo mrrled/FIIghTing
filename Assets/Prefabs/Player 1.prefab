@@ -454,6 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2b3897907c56dc4284e532fd5fe6e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hurtbox: {fileID: 669194929594474724}
   hand: {fileID: 5094051439770887838}
   moveSpeed: 5
   jumpForce: 7
@@ -1200,6 +1201,9 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 5018112679451961307}
+  staminaBar: {fileID: 0}
+  maxStamina: 100
+  currentStamina: 0
 --- !u!1 &9024404238879189850
 GameObject:
   m_ObjectHideFlags: 0
