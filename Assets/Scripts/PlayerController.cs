@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public Hurtbox hurtbox;
     private static readonly int IsJumping = Animator.StringToHash("isJumping");
     private static readonly int IsWalking = Animator.StringToHash("isWalking");
     private Rigidbody2D _rb;
@@ -18,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 _originalBoxSize;
     private bool _isCrouching;
     public Animator animator;
+    public bool isBlocking;
 
     void Start()
     {
@@ -35,6 +38,7 @@ public class PlayerController : MonoBehaviour
         else
             animator.SetBool(IsWalking, false);
         _rb.linearVelocity = new Vector2(_horizontal * moveSpeed, _rb.linearVelocity.y);
+        hurtbox.currentStamina = Math.Min(hurtbox.maxStamina, hurtbox.currentStamina + 0.25f);
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -47,6 +51,31 @@ public class PlayerController : MonoBehaviour
         if (!context.performed || !IsGrounded() || _isCrouching) return;
         animator.SetBool(IsJumping, true);
         _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
+    }
+
+    public void Block(InputAction.CallbackContext context)
+    {
+        if (animator.GetBool(IsJumping) || animator.GetBool(IsWalking)) //TODO: Прикрутить проверку на удар
+            return;
+        switch (context.phase)
+        {
+            case InputActionPhase.Started when IsGrounded() && !_isCrouching:
+                isBlocking = true;
+                // TODO: Прикрутить анимацию
+                break;
+            case InputActionPhase.Canceled when !isBlocking:
+                return;
+            case InputActionPhase.Canceled:
+                isBlocking = false;
+                //TODO: Прикрутить Анимацию
+                break;
+            case InputActionPhase.Disabled:
+            case InputActionPhase.Waiting:
+            case InputActionPhase.Performed:
+                break;
+            default:
+                return;
+        }
     }
 
     public void Crouch(InputAction.CallbackContext context)
