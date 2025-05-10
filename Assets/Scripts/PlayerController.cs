@@ -5,22 +5,22 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public Hurtbox hurtbox;
-    private static readonly int IsJumping = Animator.StringToHash("isJumping");
-    private static readonly int IsWalking = Animator.StringToHash("isWalking");
-    private Rigidbody2D _rb;
-    public Transform hand;
+    public Animator animator;
+    public bool isBlocking;
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
     public LayerMask groundLayer;
     public Transform groundCheck;
+    
+    private static readonly int IsJumping = Animator.StringToHash("isJumping");
+    private static readonly int IsWalking = Animator.StringToHash("isWalking");
+    private Rigidbody2D _rb;
     private float _horizontal;
     private BoxCollider2D _boxCollider;
     private Vector3 _originalScale;
     private const float CrouchCoefficient = 0.5f;
     private Vector2 _originalBoxSize;
     private bool _isCrouching;
-    public Animator animator;
-    public bool isBlocking;
 
     void Start()
     {
