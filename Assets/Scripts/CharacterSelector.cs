@@ -10,7 +10,7 @@ public class CharacterSelector : MonoBehaviour
     private int _selectedCharacter;
     void Start()
     {
-        _selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", 0);
+        _selectedCharacter = PlayerPrefs.GetInt($"SelectedCharacter{numPlayer}", 0);
         UpdateCharacter();
     }
 
