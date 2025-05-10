@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour
 {
     private static readonly int IsJumping = Animator.StringToHash("isJumping");
     private static readonly int IsWalking = Animator.StringToHash("isWalking");
+    private static readonly int IsCrouching = Animator.StringToHash("isCrouching");
+    private static readonly int IsWalkCrouching = Animator.StringToHash("isWalkCrouching");
     private Rigidbody2D _rb;
     public Transform hand;
     public float moveSpeed = 5f;
@@ -17,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private const float CrouchCoefficient = 0.5f;
     private Vector2 _originalBoxSize;
     private bool _isCrouching;
+    private bool _isJumping;
     public Animator animator;
 
     void Start()
@@ -29,11 +32,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        animator.SetBool(IsJumping, false);
-        if(IsGrounded() && _horizontal != 0)
-            animator.SetBool(IsWalking, true);
-        else
-            animator.SetBool(IsWalking, false);
+        Animate();
+        _isJumping = false;
         _rb.linearVelocity = new Vector2(_horizontal * moveSpeed, _rb.linearVelocity.y);
     }
 
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         if (!context.performed || !IsGrounded() || _isCrouching) return;
-        animator.SetBool(IsJumping, true);
+        _isJumping = true;
         _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
     }
 
@@ -55,17 +55,11 @@ public class PlayerController : MonoBehaviour
         {
             case InputActionPhase.Started when IsGrounded():
                 _isCrouching = true;
-                transform.localScale = new Vector3(_originalScale.x, _originalScale.y * CrouchCoefficient, _originalScale.z);
-                _boxCollider.size = new Vector2(_boxCollider.size.x, _boxCollider.size.y * CrouchCoefficient);
-                transform.position = new Vector2(transform.position.x, transform.position.y - transform.localScale.y);
                 break;
             case InputActionPhase.Canceled when !_isCrouching:
                 return;
             case InputActionPhase.Canceled:
-                _isCrouching= false;
-                transform.position = new Vector2(transform.position.x, transform.position.y + transform.localScale.y / 2);
-                transform.localScale = _originalScale;
-                _boxCollider.size = _originalBoxSize;
+                _isCrouching = false;
                 break;
         }
     }
@@ -73,5 +67,13 @@ public class PlayerController : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, .2f, groundLayer);
+    }
+
+    private void Animate()
+    {
+        animator.SetBool(IsJumping, _isJumping);
+        animator.SetBool(IsWalkCrouching, IsGrounded() && _horizontal != 0 && _isCrouching);
+        animator.SetBool(IsWalking, IsGrounded() && _horizontal != 0 && !_isCrouching);
+        animator.SetBool(IsCrouching, IsGrounded() && _horizontal == 0 && _isCrouching);
     }
 }
