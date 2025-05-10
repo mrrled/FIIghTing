@@ -274,8 +274,8 @@ Canvas:
   m_GameObject: {fileID: 67717581}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1303413707}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -286,7 +286,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &67717585
 RectTransform:
@@ -391,9 +391,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197837840}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 651, y: 271, z: 0}
-  m_LocalScale: {x: 31.358395, y: 31.358395, z: 31.358395}
+  m_LocalScale: {x: 33, y: 33, z: 33}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -448,7 +448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 189, y: 0.000012398}
+  m_AnchoredPosition: {x: 189, y: 1}
   m_SizeDelta: {x: 70.9769, y: 104.8813}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &958644868
@@ -794,10 +794,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 67717585}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 440, y: -282}
-  m_SizeDelta: {x: 466.5725, y: 120.1868}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -197.09756, y: 50.767}
+  m_SizeDelta: {x: 394.1876, y: 101.5408}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1661487599
 MonoBehaviour:
@@ -928,7 +928,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -158.7, y: 0.000012398}
+  m_AnchoredPosition: {x: -158.7, y: 1}
   m_SizeDelta: {x: 70.9769, y: 104.8813}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1706031065
@@ -1031,6 +1031,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1303413708}
   - {fileID: 19132292}
-  - {fileID: 67717585}
   - {fileID: 197837842}
+  - {fileID: 67717585}
   - {fileID: 1019694242}
