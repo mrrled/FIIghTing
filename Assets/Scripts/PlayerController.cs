@@ -1,26 +1,29 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     public Hurtbox hurtbox;
-    public Animator animator;
     public bool isBlocking;
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
     public LayerMask groundLayer;
     public Transform groundCheck;
+    public Animator animator;
     
     private static readonly int IsJumping = Animator.StringToHash("isJumping");
     private static readonly int IsWalking = Animator.StringToHash("isWalking");
+    private static readonly int IsCrouching = Animator.StringToHash("isCrouching");
+    private static readonly int IsWalkCrouching = Animator.StringToHash("isWalkCrouching");
     private Rigidbody2D _rb;
+    public Transform hand;
     private float _horizontal;
     private BoxCollider2D _boxCollider;
     private Vector3 _originalScale;
     private const float CrouchCoefficient = 0.5f;
     private Vector2 _originalBoxSize;
     private bool _isCrouching;
+    private bool _isJumping;
 
     void Start()
     {
@@ -32,13 +35,9 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        animator.SetBool(IsJumping, false);
-        if(IsGrounded() && _horizontal != 0)
-            animator.SetBool(IsWalking, true);
-        else
-            animator.SetBool(IsWalking, false);
+        Animate();
+        _isJumping = false;
         _rb.linearVelocity = new Vector2(_horizontal * moveSpeed, _rb.linearVelocity.y);
-        hurtbox.currentStamina = Math.Min(hurtbox.maxStamina, hurtbox.currentStamina + 0.25f);
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -49,33 +48,8 @@ public class PlayerController : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         if (!context.performed || !IsGrounded() || _isCrouching) return;
-        animator.SetBool(IsJumping, true);
+        _isJumping = true;
         _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
-    }
-
-    public void Block(InputAction.CallbackContext context)
-    {
-        if (animator.GetBool(IsJumping) || animator.GetBool(IsWalking)) //TODO: Прикрутить проверку на удар
-            return;
-        switch (context.phase)
-        {
-            case InputActionPhase.Started when IsGrounded() && !_isCrouching:
-                isBlocking = true;
-                // TODO: Прикрутить анимацию
-                break;
-            case InputActionPhase.Canceled when !isBlocking:
-                return;
-            case InputActionPhase.Canceled:
-                isBlocking = false;
-                //TODO: Прикрутить Анимацию
-                break;
-            case InputActionPhase.Disabled:
-            case InputActionPhase.Waiting:
-            case InputActionPhase.Performed:
-                break;
-            default:
-                return;
-        }
     }
 
     public void Crouch(InputAction.CallbackContext context)
@@ -91,10 +65,7 @@ public class PlayerController : MonoBehaviour
             case InputActionPhase.Canceled when !_isCrouching:
                 return;
             case InputActionPhase.Canceled:
-                _isCrouching= false;
-                transform.position = new Vector2(transform.position.x, transform.position.y + transform.localScale.y / 2);
-                transform.localScale = _originalScale;
-                _boxCollider.size = _originalBoxSize;
+                _isCrouching = false;
                 break;
         }
     }
@@ -102,5 +73,13 @@ public class PlayerController : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, .2f, groundLayer);
+    }
+
+    private void Animate()
+    {
+        animator.SetBool(IsJumping, _isJumping);
+        animator.SetBool(IsWalkCrouching, IsGrounded() && _horizontal != 0 && _isCrouching);
+        animator.SetBool(IsWalking, IsGrounded() && _horizontal != 0 && !_isCrouching);
+        animator.SetBool(IsCrouching, IsGrounded() && _horizontal == 0 && _isCrouching);
     }
 }
