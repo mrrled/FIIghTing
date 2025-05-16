@@ -19,14 +19,12 @@ public class Hurtbox : MonoBehaviour
         currentStamina = maxStamina;
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, Vector2 pushFrom)
     {
         var playerController = gameObject.transform.parent.GetComponent<PlayerController>();
+        playerController.Push(pushFrom);
         if (playerController.isBlocking)
-        {
-            
             damage = Math.Max(0f, damage - BlockDamage(damage));
-        }
         if (damage == 0) return;
         Debug.Log(gameObject.transform.parent.name + " получил " + damage + " урона!");
         currentHealth = Math.Max(0f, currentHealth - damage);

@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,24 +19,21 @@ public class PlayerController : MonoBehaviour
     private static readonly int IsWalkCrouching = Animator.StringToHash("isWalkCrouching");
     private Rigidbody2D _rb;
     private float _horizontal;
-    private BoxCollider2D _boxCollider;
-    private Vector3 _originalScale;
-    private const float CrouchCoefficient = 0.5f;
-    private Vector2 _originalBoxSize;
     private bool _isCrouching;
     private bool _isJumping;
+    private float _force = 50f;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _boxCollider = GetComponent<BoxCollider2D>();
     }
 
     private void FixedUpdate()
     {
         Animate();
         _isJumping = false;
-        _rb.linearVelocity = new Vector2(_horizontal * moveSpeed, _rb.linearVelocity.y);
+        var velocityChange = _horizontal * moveSpeed - _rb.linearVelocity.x;
+        _rb.AddForce(new Vector2(velocityChange * 5f, 0f), ForceMode2D.Force);
         hurtbox.currentStamina = Math.Min(hurtbox.maxStamina, hurtbox.currentStamina + 0.25f);
     }
 
@@ -48,7 +46,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!context.performed || !IsGrounded() || _isCrouching) return;
         _isJumping = true;
-        _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
+        _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
     public void Crouch(InputAction.CallbackContext context)
@@ -89,6 +87,13 @@ public class PlayerController : MonoBehaviour
             default:
                 return;
         }
+    }
+
+    public void Push(Vector2 pushFrom)
+    {
+        var pushDirection = ((Vector2)transform.position - pushFrom).normalized;
+        _rb.linearVelocity = Vector2.zero;
+        _rb.AddForce(pushDirection * _force + Vector2.up * 10f, ForceMode2D.Impulse);
     }
     
     private bool IsGrounded()
