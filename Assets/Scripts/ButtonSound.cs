@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ButtonSound : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler
+public class ButtonSound : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 {
     public AudioSource audioSource;
     public AudioSource audioClick;
@@ -13,17 +13,16 @@ public class ButtonSound : MonoBehaviour, IPointerEnterHandler, IPointerClickHan
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        audioSource.PlayOneShot(audioSource.clip);
-        _animator.SetTrigger("Highlighted");
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        _animator.SetTrigger("Normal");
+        EventSystem.current.SetSelectedGameObject(gameObject);
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         audioClick.Play();
+    }
+
+    public void PlaySelectedSound()
+    {
+        audioSource.Play();
     }
 }
