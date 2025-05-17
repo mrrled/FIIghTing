@@ -12,6 +12,7 @@ public class Hurtbox : MonoBehaviour
     public Image staminaBar; //TODO: Прикрутить картинку Стамина Бара
     public float maxStamina = 100f;
     public float currentStamina;
+    public AudioSource attackSound;
 
     void Start()
     {
@@ -19,15 +20,14 @@ public class Hurtbox : MonoBehaviour
         currentStamina = maxStamina;
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, Vector2 pushFrom)
     {
         var playerController = gameObject.transform.parent.GetComponent<PlayerController>();
         if (playerController.isBlocking)
-        {
-            
             damage = Math.Max(0f, damage - BlockDamage(damage));
-        }
         if (damage == 0) return;
+        attackSound.Play();
+        playerController.Push(pushFrom);
         Debug.Log(gameObject.transform.parent.name + " получил " + damage + " урона!");
         currentHealth = Math.Max(0f, currentHealth - damage);
         healthBar.fillAmount = currentHealth / maxHealth;
