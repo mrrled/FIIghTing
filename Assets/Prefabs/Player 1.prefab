@@ -1282,6 +1282,8 @@ MonoBehaviour:
   maxStamina: 100
   currentStamina: 0
   attackSound: {fileID: 3139142083234127017}
+  animator: {fileID: 8878275064238735482}
+  recieveDamageTrigger: hit
 --- !u!1 &8699069513268584800
 GameObject:
   m_ObjectHideFlags: 0

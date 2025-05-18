@@ -13,6 +13,8 @@ public class Hurtbox : MonoBehaviour
     public float maxStamina = 100f;
     public float currentStamina;
     public AudioSource attackSound;
+    public Animator animator;
+    public string recieveDamageTrigger = "hit";
 
     void Start()
     {
@@ -35,6 +37,7 @@ public class Hurtbox : MonoBehaviour
         Debug.Log(gameObject.transform.parent.name + " получил " + damage + " урона!");
         currentHealth = Math.Max(0f, currentHealth - damage);
         healthBar.fillAmount = currentHealth / maxHealth;
+        animator.SetTrigger(recieveDamageTrigger);
     }
 
     private float BlockDamage(float damage)

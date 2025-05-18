@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private static readonly int IsWalking = Animator.StringToHash("isWalking");
     private static readonly int IsCrouching = Animator.StringToHash("isCrouching");
     private static readonly int IsWalkCrouching = Animator.StringToHash("isWalkCrouching");
+    private static readonly int IsBlockingAnim = Animator.StringToHash("isBlocking");
     private Rigidbody2D _rb;
     private float _horizontal;
     private bool _isCrouching;
@@ -103,6 +104,7 @@ public class PlayerController : MonoBehaviour
 
     private void Animate()
     {
+        animator.SetBool(IsBlockingAnim, isBlocking);
         animator.SetBool(IsJumping, _isJumping);
         animator.SetBool(IsWalkCrouching, IsGrounded() && _horizontal != 0 && _isCrouching);
         animator.SetBool(IsWalking, IsGrounded() && _horizontal != 0 && !_isCrouching);
