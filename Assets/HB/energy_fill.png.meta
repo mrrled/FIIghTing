@@ -1,28 +1,19 @@
 fileFormatVersion: 2
-guid: d8818e760c22fc04dbe58ca6092cc2cd
+guid: 8b7c737383423b54bb820a97b6f39b2e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5933801120269915723
-    second: sit_sprites_0
+      213: -5343986789045001816
+    second: energy_fill_0
   - first:
-      213: -7099848758173102481
-    second: sit_sprites_1
-  - first:
-      213: 7908523325557136478
-    second: sit_sprites_2
-  - first:
-      213: -2691057435628306271
-    second: sit_sprites_3
-  - first:
-      213: 5440354240980140740
-    second: sit_sprites_4
+      213: -5170960616852054563
+    second: energy_fill_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
-    sRGBTexture: 0
+    sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -49,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +51,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -84,7 +75,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -112,111 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sit_sprites_0
+      name: energy_fill_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 77
-        width: 1082
-        height: 1430
+        x: 123
+        y: 71
+        width: 742
+        height: 85
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b46d0852ea8195250800000000000000
-      internalID: 5933801120269915723
+      spriteID: 8a1a79a345856d5b0800000000000000
+      internalID: -5343986789045001816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sit_sprites_1
+      name: energy_fill_1
       rect:
         serializedVersion: 2
-        x: 1157
-        y: 65
-        width: 1088
-        height: 1430
+        x: 156
+        y: 155
+        width: 9
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f6e081acb25487d90800000000000000
-      internalID: -7099848758173102481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sit_sprites_2
-      rect:
-        serializedVersion: 2
-        x: 2321
-        y: 53
-        width: 1064
-        height: 1430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e5c59bd3018b0cd60800000000000000
-      internalID: 7908523325557136478
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sit_sprites_3
-      rect:
-        serializedVersion: 2
-        x: 3449
-        y: 53
-        width: 1124
-        height: 1430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1a08337258177aad0800000000000000
-      internalID: -2691057435628306271
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sit_sprites_4
-      rect:
-        serializedVersion: 2
-        x: 4697
-        y: 65
-        width: 1106
-        height: 1430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4c249e1ab55008b40800000000000000
-      internalID: 5440354240980140740
+      spriteID: ddd9ff447be0d38b0800000000000000
+      internalID: -5170960616852054563
       vertices: []
       indices: 
       edges: []
@@ -225,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c216df893bce80049aa463ea5c4758b3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -234,12 +159,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      sit_sprites_0: 5933801120269915723
-      sit_sprites_1: -7099848758173102481
-      sit_sprites_2: 7908523325557136478
-      sit_sprites_3: -2691057435628306271
-      sit_sprites_4: 5440354240980140740
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

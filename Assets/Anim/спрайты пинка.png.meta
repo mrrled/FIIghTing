@@ -1,40 +1,43 @@
 fileFormatVersion: 2
-guid: 0e5060aab7cecf44182a2c519a234004
+guid: f315837c14582ab4fbc8a2e7fcf16eb4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8318553905250632109
-    second: sit&walk sprites_0
+      213: 276140943598899701
+    second: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_0"
   - first:
-      213: -5884284863752857009
-    second: sit&walk sprites_1
+      213: 2890168262094316538
+    second: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_1"
   - first:
-      213: -3079550444150828280
-    second: sit&walk sprites_2
+      213: -6308894784189276385
+    second: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_2"
   - first:
-      213: 1018362238498642855
-    second: sit&walk sprites_3
+      213: 2475928475369661536
+    second: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_3"
   - first:
-      213: -1825627571951515351
-    second: sit&walk sprites_4
+      213: -7484728660947997266
+    second: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_4"
   - first:
-      213: -5962910300581288719
-    second: sit&walk sprites_5
+      213: 441559414092159058
+    second: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_5"
   - first:
-      213: 1603510457624210195
-    second: sit&walk sprites_6
+      213: 1286568640405733392
+    second: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_6"
   - first:
-      213: -2674056101585115049
-    second: sit&walk sprites_7
+      213: 2023370875846253744
+    second: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_7"
   - first:
-      213: 4928296528573853649
-    second: sit&walk sprites_8
+      213: -3005365767280347814
+    second: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_8"
   - first:
-      213: -8749737230448478268
-    second: sit&walk sprites_9
+      213: -3681405354886575874
+    second: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_9"
   - first:
-      213: -5939768755026463657
-    second: sit&walk sprites_10
+      213: 7046934173132771409
+    second: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_10"
+  - first:
+      213: -1479116294437934757
+    second: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_11"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -130,11 +133,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sit&walk sprites_0
+      name: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_0"
       rect:
         serializedVersion: 2
-        x: 449
-        y: 1547
+        x: 5
+        y: 35
         width: 692
         height: 1430
       alignment: 0
@@ -145,19 +148,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da1076704b0717370800000000000000
-      internalID: 8318553905250632109
+      spriteID: 5f15723a9bc05d300800000000000000
+      internalID: 276140943598899701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sit&walk sprites_1
+      name: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_1"
       rect:
         serializedVersion: 2
-        x: 1253
-        y: 1571
-        width: 854
+        x: 1284
+        y: 69
+        width: 938
         height: 1430
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -167,19 +170,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4a9dcab712d65ea0800000000000000
-      internalID: -5884284863752857009
+      spriteID: af36d3bb8b0fb1820800000000000000
+      internalID: 2890168262094316538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sit&walk sprites_2
+      name: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_2"
       rect:
         serializedVersion: 2
-        x: 2171
-        y: 1607
-        width: 1088
+        x: 1932
+        y: 1269
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f5517ae9d4278a0800000000000000
+      internalID: -6308894784189276385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_3"
+      rect:
+        serializedVersion: 2
+        x: 10947
+        y: 11
+        width: 734
         height: 1430
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -189,19 +214,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8035e7cef2d3345d0800000000000000
-      internalID: -3079550444150828280
+      spriteID: 064eeaf84d34c5220800000000000000
+      internalID: 2475928475369661536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sit&walk sprites_3
+      name: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_4"
       rect:
         serializedVersion: 2
-        x: 3383
-        y: 1607
-        width: 926
+        x: 2358
+        y: 77
+        width: 1214
         height: 1430
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -211,19 +236,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ab12667f03f12e00800000000000000
-      internalID: 1018362238498642855
+      spriteID: ead620c40f6e02890800000000000000
+      internalID: -7484728660947997266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sit&walk sprites_4
+      name: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_5"
       rect:
         serializedVersion: 2
-        x: 4391
-        y: 1595
-        width: 680
+        x: 3698
+        y: 47
+        width: 950
         height: 1430
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -233,19 +258,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 929cba955611aa6e0800000000000000
-      internalID: -1825627571951515351
+      spriteID: 258513892fbb02600800000000000000
+      internalID: 441559414092159058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sit&walk sprites_5
+      name: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_6"
       rect:
         serializedVersion: 2
-        x: 5243
-        y: 1595
-        width: 626
+        x: 4861
+        y: 47
+        width: 968
         height: 1430
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -255,19 +280,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f4a55aacac7f3da0800000000000000
-      internalID: -5962910300581288719
+      spriteID: 0108a86ac5fcad110800000000000000
+      internalID: 1286568640405733392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sit&walk sprites_6
+      name: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_7"
       rect:
         serializedVersion: 2
-        x: 421
-        y: 7
-        width: 614
+        x: 5986
+        y: 67
+        width: 914
         height: 1430
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -277,19 +302,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 31ba054f340d04610800000000000000
-      internalID: 1603510457624210195
+      spriteID: 0bcdfaf5715741c10800000000000000
+      internalID: 2023370875846253744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sit&walk sprites_7
+      name: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_8"
       rect:
         serializedVersion: 2
-        x: 1147
-        y: 13
-        width: 674
+        x: 6928
+        y: 55
+        width: 698
         height: 1430
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -299,19 +324,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 758ad83b428d3ead0800000000000000
-      internalID: -2674056101585115049
+      spriteID: a55b22df1cbca46d0800000000000000
+      internalID: -3005365767280347814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sit&walk sprites_8
+      name: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_9"
       rect:
         serializedVersion: 2
-        x: 1963
-        y: 37
-        width: 824
+        x: 7638
+        y: 86
+        width: 1106
         height: 1430
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -321,19 +346,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1df6f6dd493d46440800000000000000
-      internalID: 4928296528573853649
+      spriteID: ef8c3cba55509ecc0800000000000000
+      internalID: -3681405354886575874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sit&walk sprites_9
+      name: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_10"
       rect:
         serializedVersion: 2
-        x: 2917
-        y: 73
-        width: 920
+        x: 8863
+        y: 74
+        width: 998
         height: 1430
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -343,19 +368,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c7bb15d850b29680800000000000000
-      internalID: -8749737230448478268
+      spriteID: 150d3215b4dbbc160800000000000000
+      internalID: 7046934173132771409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sit&walk sprites_10
+      name: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_11"
       rect:
         serializedVersion: 2
-        x: 3955
-        y: 97
-        width: 1124
+        x: 10006
+        y: 41
+        width: 764
         height: 1430
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -365,8 +390,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 754feac99c3b19da0800000000000000
-      internalID: -5939768755026463657
+      spriteID: b59e880219f197be0800000000000000
+      internalID: -1479116294437934757
       vertices: []
       indices: 
       edges: []
@@ -375,7 +400,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: cbfd554c84c08044eab927a0d8d36644
+    spriteID: beb928c5ef5d7e14bb75e1254ad31622
     internalID: 0
     vertices: []
     indices: 
@@ -385,17 +410,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sit&walk sprites_0: 8318553905250632109
-      sit&walk sprites_1: -5884284863752857009
-      sit&walk sprites_10: -5939768755026463657
-      sit&walk sprites_2: -3079550444150828280
-      sit&walk sprites_3: 1018362238498642855
-      sit&walk sprites_4: -1825627571951515351
-      sit&walk sprites_5: -5962910300581288719
-      sit&walk sprites_6: 1603510457624210195
-      sit&walk sprites_7: -2674056101585115049
-      sit&walk sprites_8: 4928296528573853649
-      sit&walk sprites_9: -8749737230448478268
+      "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_0": 276140943598899701
+      "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_1": 2890168262094316538
+      "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_10": 7046934173132771409
+      "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_11": -1479116294437934757
+      "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_2": -6308894784189276385
+      "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_3": 2475928475369661536
+      "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_4": -7484728660947997266
+      "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_5": 441559414092159058
+      "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_6": 1286568640405733392
+      "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_7": 2023370875846253744
+      "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_8": -3005365767280347814
+      "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043F\u0438\u043D\u043A\u0430_9": -3681405354886575874
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
