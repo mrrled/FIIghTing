@@ -20,12 +20,12 @@ public class RoundManager : MonoBehaviour
         if (_hurtboxPlayer1.currentHealth <= 1e-10)
         {
             StartCoroutine(ChangeRound(1));
-            _hurtboxPlayer1.currentHealth = 1f;//TODO: Убрать этот костыль
+            _hurtboxPlayer1.currentHealth = 1f;
         }
         else if (_hurtboxPlayer2.currentHealth <= 1e-10)
         {
             StartCoroutine(ChangeRound(0));
-            _hurtboxPlayer2.currentHealth = 1f;//TODO: убрать этот костыль
+            _hurtboxPlayer2.currentHealth = 1f;
         }
         
     }
