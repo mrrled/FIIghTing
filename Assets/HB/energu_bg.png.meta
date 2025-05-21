@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      energu_bg_0: 1947663502590800017
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
