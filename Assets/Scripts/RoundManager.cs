@@ -40,7 +40,7 @@ public class RoundManager : MonoBehaviour
         var (score0, score1) = (PlayerPrefs.GetInt("score0", 0), PlayerPrefs.GetInt("score1", 0));
         ChangeRoundLog(roundNumber, score0, score1);
         
-        yield return new WaitForSeconds(1f); // Задержка перед началом нового раунда
+        yield return new WaitForSeconds(1f);
         LoadNextScene(score0, score1);
     }
 
@@ -54,7 +54,7 @@ public class RoundManager : MonoBehaviour
     private static void LoadNextScene(int score0, int score1)
     {
         SceneManager.LoadScene((score0 >= 2 || score1 >= 2)
-            ? 4 // TODO: Придумать как избавиться от хардкода
+            ? 4 
             : SceneManager.GetActiveScene().buildIndex);
     }
 }

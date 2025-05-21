@@ -5,12 +5,7 @@ public class ButtonSound : MonoBehaviour, IPointerEnterHandler, IPointerClickHan
 {
     public AudioSource audioSource;
     public AudioSource audioClick;
-    private Animator _animator;
-
-    void Start()
-    {
-        _animator = GetComponent<Animator>();
-    }
+    
     public void OnPointerEnter(PointerEventData eventData)
     {
         EventSystem.current.SetSelectedGameObject(gameObject);

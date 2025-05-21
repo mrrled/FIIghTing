@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public bool isBlocking;
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
+    private const float Force = 50f;
     public LayerMask groundLayer;
     public Transform groundCheck;
     public Animator animator;
@@ -18,11 +18,12 @@ public class PlayerController : MonoBehaviour
     private static readonly int IsCrouching = Animator.StringToHash("isCrouching");
     private static readonly int IsWalkCrouching = Animator.StringToHash("isWalkCrouching");
     private static readonly int IsBlockingAnim = Animator.StringToHash("isBlocking");
+    
     private Rigidbody2D _rb;
     private float _horizontal;
     private bool _isCrouching;
     private bool _isJumping;
-    private float _force = 50f;
+    
 
     void Start()
     {
@@ -67,19 +68,17 @@ public class PlayerController : MonoBehaviour
     
     public void Block(InputAction.CallbackContext context)
     {
-        if (animator.GetBool(IsJumping) || animator.GetBool(IsWalking)) //TODO: Прикрутить проверку на удар
+        if (animator.GetBool(IsJumping) || animator.GetBool(IsWalking))
             return;
         switch (context.phase)
         {
             case InputActionPhase.Started when IsGrounded() && !_isCrouching:
                 isBlocking = true;
-                // TODO: Прикрутить анимацию
                 break;
             case InputActionPhase.Canceled when !isBlocking:
                 return;
             case InputActionPhase.Canceled:
                 isBlocking = false;
-                //TODO: Прикрутить Анимацию
                 break;
             case InputActionPhase.Disabled:
             case InputActionPhase.Waiting:
@@ -94,7 +93,7 @@ public class PlayerController : MonoBehaviour
     {
         var pushDirection = ((Vector2)transform.position - pushFrom).normalized;
         _rb.linearVelocity = Vector2.zero;
-        _rb.AddForce(pushDirection * _force + Vector2.up * 10f, ForceMode2D.Impulse);
+        _rb.AddForce(pushDirection * Force + Vector2.up * 10f, ForceMode2D.Impulse);
     }
     
     private bool IsGrounded()
