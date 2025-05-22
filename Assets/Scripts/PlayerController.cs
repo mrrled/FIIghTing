@@ -36,7 +36,8 @@ public class PlayerController : MonoBehaviour
         _isJumping = false;
         var velocityChange = _horizontal * moveSpeed - _rb.linearVelocity.x;
         _rb.AddForce(new Vector2(velocityChange * 5f, 0f), ForceMode2D.Force);
-        hurtbox.currentStamina = Math.Min(hurtbox.maxStamina, hurtbox.currentStamina + 0.25f);
+        if(!isBlocking)
+            hurtbox.currentStamina = Math.Min(hurtbox.maxStamina, hurtbox.currentStamina + 0.25f);
     }
 
     public void Move(InputAction.CallbackContext context)
