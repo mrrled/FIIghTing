@@ -14,6 +14,8 @@ public class Hurtbox : MonoBehaviour
     public Animator animator;
     public string receiveDamageTrigger = "hit";
 
+    private const float BlockCoefficient = 2.0f;
+    
     void Start()
     {
         currentHealth = maxHealth;
@@ -46,8 +48,8 @@ public class Hurtbox : MonoBehaviour
     private float BlockDamage(float damage)
     {
         Debug.Log(gameObject.transform.parent.name + " заблокировал " + damage + " урона!");
-        var blockedDamage = Math.Min(damage, currentStamina / 2);
-        currentStamina = Math.Max(0f, currentStamina - 2 * damage);
+        var blockedDamage = Math.Min(damage, currentStamina / BlockCoefficient);
+        currentStamina = Math.Max(0f, currentStamina - BlockCoefficient * damage);
         return blockedDamage;
     }
 }
