@@ -8,22 +8,22 @@ public class PlayerController : MonoBehaviour
     public bool isBlocking;
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
-    private const float Force = 50f;
+    public float repulsionForce = 50f;
     public LayerMask groundLayer;
     public Transform groundCheck;
     public Animator animator;
-    
+
     private static readonly int IsJumping = Animator.StringToHash("isJumping");
     private static readonly int IsWalking = Animator.StringToHash("isWalking");
     private static readonly int IsCrouching = Animator.StringToHash("isCrouching");
     private static readonly int IsWalkCrouching = Animator.StringToHash("isWalkCrouching");
     private static readonly int IsBlockingAnim = Animator.StringToHash("isBlocking");
-    
+
     private Rigidbody2D _rb;
     private float _horizontal;
     private bool _isCrouching;
     private bool _isJumping;
-    
+
 
     void Start()
     {
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
-    
+
     public void Block(InputAction.CallbackContext context)
     {
         if (animator.GetBool(IsJumping) || animator.GetBool(IsWalking))
@@ -93,9 +93,9 @@ public class PlayerController : MonoBehaviour
     {
         var pushDirection = ((Vector2)transform.position - pushFrom).normalized;
         _rb.linearVelocity = Vector2.zero;
-        _rb.AddForce(pushDirection * Force + Vector2.up * 10f, ForceMode2D.Impulse);
+        _rb.AddForce(new Vector2(pushDirection.x * repulsionForce, 0) + Vector2.up * 10f, ForceMode2D.Impulse);
     }
-    
+
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, .2f, groundLayer);
