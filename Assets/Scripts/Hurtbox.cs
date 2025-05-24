@@ -14,6 +14,11 @@ public class Hurtbox : MonoBehaviour
     public Animator animator;
     public string receiveDamageTrigger = "hit";
 
+    private const float InvincibilityDuration = 0.5f;
+    private float _nextTimeCanTakeDamage;
+    
+    private const float BlockCoefficient = 2.0f;
+    
     void Start()
     {
         currentHealth = maxHealth;
@@ -26,6 +31,8 @@ public class Hurtbox : MonoBehaviour
 
     public void TakeDamage(float damage, Vector2 pushFrom)
     {
+        if (Time.time < _nextTimeCanTakeDamage) return;
+        
         var playerController = gameObject.transform.parent.GetComponent<PlayerController>();
         
         if (playerController.isBlocking)
@@ -38,6 +45,8 @@ public class Hurtbox : MonoBehaviour
        
         Debug.Log(gameObject.transform.parent.name + " получил " + damage + " урона!");
         
+        _nextTimeCanTakeDamage = Time.time + InvincibilityDuration;
+        
         currentHealth = Math.Max(0f, currentHealth - damage);
         healthBar.fillAmount = currentHealth / maxHealth;
         animator.SetTrigger(receiveDamageTrigger);
@@ -46,8 +55,8 @@ public class Hurtbox : MonoBehaviour
     private float BlockDamage(float damage)
     {
         Debug.Log(gameObject.transform.parent.name + " заблокировал " + damage + " урона!");
-        var blockedDamage = Math.Min(damage, currentStamina / 2);
-        currentStamina = Math.Max(0f, currentStamina - 2 * damage);
+        var blockedDamage = Math.Min(damage, currentStamina / BlockCoefficient);
+        currentStamina = Math.Max(0f, currentStamina - BlockCoefficient * damage);
         return blockedDamage;
     }
 }
