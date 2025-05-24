@@ -744,7 +744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24fe660470179e74f88e7ddcb33d2892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  type: 1
   owner: {fileID: 119521531078450203}
 --- !u!1 &5153157551801148436
 GameObject:
@@ -1179,7 +1179,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3232063394026891516}
   - component: {fileID: 4462000574800253728}
-  - component: {fileID: 2911594069821358424}
   - component: {fileID: 669194929594474724}
   m_Layer: 9
   m_Name: Hurtbox
@@ -1249,20 +1248,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.8734274, y: 13.454248}
   m_EdgeRadius: 0
---- !u!114 &2911594069821358424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7633899416347995778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdf89c19f28fac2429e2324976373a12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
-  lineThickness: 2
 --- !u!114 &669194929594474724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1283,7 +1268,7 @@ MonoBehaviour:
   currentStamina: 0
   attackSound: {fileID: 3139142083234127017}
   animator: {fileID: 8878275064238735482}
-  recieveDamageTrigger: hit
+  receiveDamageTrigger: hit
 --- !u!1 &8699069513268584800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,7 +1499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24fe660470179e74f88e7ddcb33d2892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  type: 0
   owner: {fileID: 119521531078450203}
 --- !u!61 &1950316711120152901
 BoxCollider2D:

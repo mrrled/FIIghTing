@@ -9,7 +9,7 @@ public enum HitboxType
 
 public class Hitbox : MonoBehaviour
 {
-    public HitboxType type = HitboxType.Hand;
+    public HitboxType type;
     public GameObject owner;
 
     private float Damage
@@ -24,8 +24,6 @@ public class Hitbox : MonoBehaviour
             };
         }
     }
-
-    
     
     void Start()
     {
