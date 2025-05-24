@@ -1,10 +1,32 @@
+using System;
 using UnityEngine;
+
+public enum HitboxType
+{
+    Hand,
+    Leg
+}
 
 public class Hitbox : MonoBehaviour
 {
-    public float damage = 10;
+    public HitboxType type = HitboxType.Hand;
     public GameObject owner;
 
+    private float Damage
+    {
+        get
+        {
+            return type switch
+            {
+                HitboxType.Hand => 15f,
+                HitboxType.Leg => 20f,
+                _ => throw new ArgumentOutOfRangeException()
+            };
+        }
+    }
+
+    
+    
     void Start()
     {
         owner ??= transform.root.gameObject;
@@ -16,6 +38,6 @@ public class Hitbox : MonoBehaviour
             collision.gameObject.transform.parent.gameObject == owner)
             return;
         var hurtbox = collision.GetComponent<Hurtbox>();
-        hurtbox?.TakeDamage(damage, owner.transform.position);
+        hurtbox?.TakeDamage(Damage, owner.transform.position);
     }
 }
