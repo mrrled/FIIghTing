@@ -15,7 +15,7 @@ public class Hurtbox : MonoBehaviour
     public string receiveDamageTrigger = "hit";
 
     private const float InvincibilityDuration = 0.5f;
-    private float _nextTimeCanTakeDamage = 0f;
+    private float _nextTimeCanTakeDamage;
     
     private const float BlockCoefficient = 2.0f;
     
