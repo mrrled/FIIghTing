@@ -1489,7 +1489,7 @@ MonoBehaviour:
   animator: {fileID: 461809756941351981}
   existingHitboxObject: {fileID: 27103446109296397}
   animationTrigger: Player1_attack
-  attackDuration: 0.5
+  attackDuration: 0.7
 --- !u!95 &461809756941351981
 Animator:
   serializedVersion: 7
@@ -1528,7 +1528,7 @@ MonoBehaviour:
   animator: {fileID: 461809756941351981}
   existingHitboxObject: {fileID: 5373515538011483864}
   animationTrigger: Player1_attackLeg
-  attackDuration: 0.5
+  attackDuration: 1.2
 --- !u!1 &9006637806626918344
 GameObject:
   m_ObjectHideFlags: 0
