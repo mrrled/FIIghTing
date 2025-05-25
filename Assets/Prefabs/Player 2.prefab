@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8004945661306659314}
   - component: {fileID: 4654942893552483750}
   - component: {fileID: 7371758242255852818}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 5495170877941630069}
   - component: {fileID: 5778425606460819999}
   - component: {fileID: 4106930202007493516}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3415018617759733315}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Player 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 3506381776564701297}
   - component: {fileID: 5172299035712595037}
   - component: {fileID: 6823875981141558763}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: energy_fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1871199896659155268}
   - component: {fileID: 6853030290757109539}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: Pushbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 2363734052851177214}
   - component: {fileID: 4706093374719820096}
   - component: {fileID: 7673102673345289829}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -683,7 +683,7 @@ GameObject:
   - component: {fileID: 5852273663020834613}
   - component: {fileID: 2818775010096222802}
   - component: {fileID: 2311597842043561013}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -757,7 +757,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2145261946258676440}
   - component: {fileID: 3279380694674349734}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -846,7 +846,7 @@ GameObject:
   - component: {fileID: 3508001068504080713}
   - component: {fileID: 7255539146069312695}
   - component: {fileID: 626851041207366541}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -875,7 +875,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5373515538011483864}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -993,7 +993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 751093935486349041}
   - component: {fileID: 9024689219822400639}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: SoundAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1129,7 +1129,7 @@ GameObject:
   - component: {fileID: 1385647039401226736}
   - component: {fileID: 461809756941351981}
   - component: {fileID: 1268043225570599522}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1227,7 +1227,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 15
   m_AngularDamping: 0.05
-  m_GravityScale: 3.51
+  m_GravityScale: 7
   m_Material: {fileID: 6200000, guid: 9c117a6e40496064997f1b2dadd037c3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1467,6 +1467,7 @@ MonoBehaviour:
   isBlocking: 0
   moveSpeed: 30
   jumpForce: 45
+  repulsionForce: 50
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -1540,7 +1541,7 @@ GameObject:
   - component: {fileID: 1975371374746596014}
   - component: {fileID: 769941161029953393}
   - component: {fileID: 7902079440728134579}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Player2_HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

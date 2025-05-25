@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 595046866}
-  IsPaused: 0
+  isPaused: 0
 --- !u!4 &420730474
 Transform:
   m_ObjectHideFlags: 0
@@ -939,21 +939,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &610617084
-Transform:
+--- !u!224 &610617084
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610617081}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.1418, y: 0.0782, z: 0}
-  m_LocalScale: {x: 1.727092, y: 11.210901, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -4971.1187}
+  m_LocalScale: {x: 95.39533, y: 619.2302, z: 55.234653}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1019149717}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 39, y: 310.31934}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &615875902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,21 +1280,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &735794557
-Transform:
+--- !u!224 &735794557
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735794553}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.14, y: -5.09, z: 0}
-  m_LocalScale: {x: 25.603823, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -4971.1187}
+  m_LocalScale: {x: 1414.2183, y: 55.234653, z: 55.234653}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1019149717}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 20, y: 15}
+  m_SizeDelta: {x: -1271, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &841915099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,6 +1757,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2035050857}
+  - {fileID: 735794557}
+  - {fileID: 610617084}
   - {fileID: 1882291725}
   - {fileID: 2095974928}
   - {fileID: 1967947494}
@@ -2271,7 +2282,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 738.53, y: 61.40001}
+  m_AnchoredPosition: {x: 738.53, y: 61.400024}
   m_SizeDelta: {x: 179.85, y: 24.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1530821118
@@ -2992,21 +3003,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &2035050857
-Transform:
+--- !u!224 &2035050857
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035050854}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.07, y: 0.0782, z: 0}
-  m_LocalScale: {x: 1.727092, y: 11.210901, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -4971.1187}
+  m_LocalScale: {x: 95.39533, y: 619.2302, z: 55.234653}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1019149717}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -39, y: 310.31934}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2095974927
 GameObject:
   m_ObjectHideFlags: 0
@@ -3198,9 +3213,6 @@ SceneRoots:
   - {fileID: 1577016697}
   - {fileID: 615875904}
   - {fileID: 2112475680}
-  - {fileID: 610617084}
-  - {fileID: 2035050857}
-  - {fileID: 735794557}
   - {fileID: 420730474}
   - {fileID: 1605203718}
   - {fileID: 1019149717}
