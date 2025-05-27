@@ -23,7 +23,9 @@ public class PlayerController : MonoBehaviour
     private float _horizontal;
     private bool _isCrouching;
     private bool _isJumping;
+    private bool _canOffense = true;
 
+    private bool IsGrounded => Physics2D.OverlapCircle(groundCheck.position, .2f, groundLayer);
 
     void Start()
     {
@@ -34,8 +36,11 @@ public class PlayerController : MonoBehaviour
     {
         Animate();
         _isJumping = false;
-        var velocityChange = _horizontal * moveSpeed - _rb.linearVelocity.x;
-        _rb.AddForce(new Vector2(velocityChange * 5f, 0f), ForceMode2D.Force);
+        if (_canOffense || IsPlayerRetreating())
+        {
+            var velocityChange = _horizontal * moveSpeed - _rb.linearVelocity.x;
+            _rb.AddForce(new Vector2(velocityChange * 5f, 0f), ForceMode2D.Force);
+        }
         if(!isBlocking)
             hurtbox.currentStamina = Math.Min(hurtbox.maxStamina, hurtbox.currentStamina + 0.25f);
     }
@@ -47,7 +52,7 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (!context.performed || !IsGrounded() || _isCrouching) return;
+        if (!context.performed || !IsGrounded || _isCrouching) return;
         _isJumping = true;
         _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
@@ -56,7 +61,7 @@ public class PlayerController : MonoBehaviour
     {
         switch (context.phase)
         {
-            case InputActionPhase.Started when IsGrounded():
+            case InputActionPhase.Started when IsGrounded:
                 _isCrouching = true;
                 break;
             case InputActionPhase.Canceled when !_isCrouching:
@@ -73,7 +78,7 @@ public class PlayerController : MonoBehaviour
             return;
         switch (context.phase)
         {
-            case InputActionPhase.Started when IsGrounded() && !_isCrouching:
+            case InputActionPhase.Started when IsGrounded && !_isCrouching:
                 isBlocking = true;
                 break;
             case InputActionPhase.Canceled when !isBlocking:
@@ -96,18 +101,32 @@ public class PlayerController : MonoBehaviour
         _rb.linearVelocity = Vector2.zero;
         _rb.AddForce(new Vector2(pushDirection.x * repulsionForce, 0) + Vector2.up * 10f, ForceMode2D.Impulse);
     }
-
-    private bool IsGrounded()
+    
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        return Physics2D.OverlapCircle(groundCheck.position, .2f, groundLayer);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _canOffense = false;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _canOffense = true;
+        }
     }
 
     private void Animate()
     {
         animator.SetBool(IsBlockingAnim, isBlocking);
         animator.SetBool(IsJumping, _isJumping);
-        animator.SetBool(IsWalkCrouching, IsGrounded() && _horizontal != 0 && _isCrouching);
-        animator.SetBool(IsWalking, IsGrounded() && _horizontal != 0 && !_isCrouching);
-        animator.SetBool(IsCrouching, IsGrounded() && _horizontal == 0 && _isCrouching);
+        animator.SetBool(IsWalkCrouching, IsGrounded && _horizontal != 0 && _isCrouching);
+        animator.SetBool(IsWalking, IsGrounded && _horizontal != 0 && !_isCrouching);
+        animator.SetBool(IsCrouching, IsGrounded && _horizontal == 0 && _isCrouching);
     }
+
+    private bool IsPlayerRetreating() => _horizontal < 0 && gameObject.layer == 6
+                                             || _horizontal > 0 && gameObject.layer == 7;
 }
