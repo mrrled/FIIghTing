@@ -101,8 +101,7 @@ public class PlayerController : MonoBehaviour
         _rb.linearVelocity = Vector2.zero;
         _rb.AddForce(new Vector2(pushDirection.x * repulsionForce, 0) + Vector2.up * 10f, ForceMode2D.Impulse);
     }
-
-    [Obsolete("Obsolete")]
+    
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
