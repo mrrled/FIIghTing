@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     private bool _isCrouching;
     private bool _isJumping;
 
+    private bool IsGrounded => Physics2D.OverlapCircle(groundCheck.position, .2f, groundLayer);
+    private bool IsMoving => !_rb.linearVelocity.Equals(Vector2.zero);
 
     void Start()
     {
@@ -33,6 +35,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Animate();
+        //_rb.mass = IsMoving ? 1 : 1000;
         _isJumping = false;
         var velocityChange = _horizontal * moveSpeed - _rb.linearVelocity.x;
         _rb.AddForce(new Vector2(velocityChange * 5f, 0f), ForceMode2D.Force);
@@ -47,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (!context.performed || !IsGrounded() || _isCrouching) return;
+        if (!context.performed || !IsGrounded || _isCrouching) return;
         _isJumping = true;
         _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
@@ -56,7 +59,7 @@ public class PlayerController : MonoBehaviour
     {
         switch (context.phase)
         {
-            case InputActionPhase.Started when IsGrounded():
+            case InputActionPhase.Started when IsGrounded:
                 _isCrouching = true;
                 break;
             case InputActionPhase.Canceled when !_isCrouching:
@@ -73,7 +76,7 @@ public class PlayerController : MonoBehaviour
             return;
         switch (context.phase)
         {
-            case InputActionPhase.Started when IsGrounded() && !_isCrouching:
+            case InputActionPhase.Started when IsGrounded && !_isCrouching:
                 isBlocking = true;
                 break;
             case InputActionPhase.Canceled when !isBlocking:
@@ -93,21 +96,29 @@ public class PlayerController : MonoBehaviour
     public void Push(Vector2 pushFrom)
     {
         var pushDirection = ((Vector2)transform.position - pushFrom).normalized;
+        //var tempo = _rb.mass;
+        //_rb.mass = 1f;
         _rb.linearVelocity = Vector2.zero;
         _rb.AddForce(new Vector2(pushDirection.x * repulsionForce, 0) + Vector2.up * 10f, ForceMode2D.Impulse);
+        //_rb.mass = tempo;
     }
 
-    private bool IsGrounded()
+    [Obsolete("Obsolete")]
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        return Physics2D.OverlapCircle(groundCheck.position, .2f, groundLayer);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _horizontal = 0f;
+            _rb.velocity = Vector2.zero; // Остановка персонажа при столкновении с другим персонажем
+        }
     }
 
     private void Animate()
     {
         animator.SetBool(IsBlockingAnim, isBlocking);
         animator.SetBool(IsJumping, _isJumping);
-        animator.SetBool(IsWalkCrouching, IsGrounded() && _horizontal != 0 && _isCrouching);
-        animator.SetBool(IsWalking, IsGrounded() && _horizontal != 0 && !_isCrouching);
-        animator.SetBool(IsCrouching, IsGrounded() && _horizontal == 0 && _isCrouching);
+        animator.SetBool(IsWalkCrouching, IsGrounded && _horizontal != 0 && _isCrouching);
+        animator.SetBool(IsWalking, IsGrounded && _horizontal != 0 && !_isCrouching);
+        animator.SetBool(IsCrouching, IsGrounded && _horizontal == 0 && _isCrouching);
     }
 }
