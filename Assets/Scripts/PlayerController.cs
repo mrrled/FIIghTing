@@ -23,9 +23,9 @@ public class PlayerController : MonoBehaviour
     private float _horizontal;
     private bool _isCrouching;
     private bool _isJumping;
+    private bool _canOffense = true;
 
     private bool IsGrounded => Physics2D.OverlapCircle(groundCheck.position, .2f, groundLayer);
-    private bool IsMoving => !_rb.linearVelocity.Equals(Vector2.zero);
 
     void Start()
     {
@@ -35,10 +35,12 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Animate();
-        //_rb.mass = IsMoving ? 1 : 1000;
         _isJumping = false;
-        var velocityChange = _horizontal * moveSpeed - _rb.linearVelocity.x;
-        _rb.AddForce(new Vector2(velocityChange * 5f, 0f), ForceMode2D.Force);
+        if (_canOffense || IsPlayerRetreating())
+        {
+            var velocityChange = _horizontal * moveSpeed - _rb.linearVelocity.x;
+            _rb.AddForce(new Vector2(velocityChange * 5f, 0f), ForceMode2D.Force);
+        }
         if(!isBlocking)
             hurtbox.currentStamina = Math.Min(hurtbox.maxStamina, hurtbox.currentStamina + 0.25f);
     }
@@ -96,11 +98,8 @@ public class PlayerController : MonoBehaviour
     public void Push(Vector2 pushFrom)
     {
         var pushDirection = ((Vector2)transform.position - pushFrom).normalized;
-        //var tempo = _rb.mass;
-        //_rb.mass = 1f;
         _rb.linearVelocity = Vector2.zero;
         _rb.AddForce(new Vector2(pushDirection.x * repulsionForce, 0) + Vector2.up * 10f, ForceMode2D.Impulse);
-        //_rb.mass = tempo;
     }
 
     [Obsolete("Obsolete")]
@@ -108,8 +107,15 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            _horizontal = 0f;
-            _rb.velocity = Vector2.zero; // Остановка персонажа при столкновении с другим персонажем
+            _canOffense = false;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _canOffense = true;
         }
     }
 
@@ -121,4 +127,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(IsWalking, IsGrounded && _horizontal != 0 && !_isCrouching);
         animator.SetBool(IsCrouching, IsGrounded && _horizontal == 0 && _isCrouching);
     }
+
+    private bool IsPlayerRetreating() => _horizontal < 0 && gameObject.layer == 6
+                                             || _horizontal > 0 && gameObject.layer == 7;
 }
