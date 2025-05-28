@@ -12,6 +12,8 @@ public class Hitbox : MonoBehaviour
     public HitboxType type;
     public GameObject owner;
 
+    private bool _canAttack = true;
+
     private float Damage
     {
         get
@@ -32,10 +34,17 @@ public class Hitbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!_canAttack) return;
         if (collision.gameObject.layer != LayerMask.NameToLayer("Hurtbox") ||
             collision.gameObject.transform.parent.gameObject == owner)
             return;
         var hurtbox = collision.GetComponent<Hurtbox>();
         hurtbox?.TakeDamage(Damage, owner.transform.position);
+        _canAttack = false;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        _canAttack = true;
     }
 }
