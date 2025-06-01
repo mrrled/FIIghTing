@@ -4,6 +4,10 @@ public class CharacterLoader : MonoBehaviour
 {
     public CharacterDataBase characterDatabase1;
     public CharacterDataBase characterDatabase2;
+    public GameObject canvas;
+    
+    private const float OffsetPlayer1 = 9.4f;
+    private const float OffsetPlayer2 = 14f;
 
     void Awake()
     {
@@ -13,29 +17,19 @@ public class CharacterLoader : MonoBehaviour
 
     private void LoadCharacter(int num)
     {
-        var camera = Camera.main;
-        var halfHeight = camera.orthographicSize;
-        var halfWidth = halfHeight * camera.aspect;
-        Debug.Log(num);
-        Debug.Log(halfWidth);
-        Debug.Log(halfHeight);
+        var mainCamera = Camera.main;
+        if (mainCamera is null)
+            return;
+        var halfHeight = mainCamera.orthographicSize;
+        var halfWidth = halfHeight * mainCamera.aspect;
         var index = PlayerPrefs.GetInt($"SelectedCharacter{num}");
         var position = Vector3.zero;
-        position.y = camera.transform.position.y - halfHeight;
-        if (num == 1)
-        {
-            // position.x = camera.transform.position.x + halfWidth;
-            // position.x /= 2;
-            var character = characterDatabase1.GetCharacter(index);
-            Instantiate(character.characterPrefab, position, Quaternion.identity);
-        }
-        else
-        {
-            // position.x = camera.transform.position.x - halfWidth;
-            // position.x /= 2;
-            var character = characterDatabase2.GetCharacter(index);
-            Instantiate(character.characterPrefab, position, Quaternion.identity);
-        }
-        Debug.Log(position);
+        position.y = mainCamera.transform.position.y - halfHeight - 0.5f;
+        position.x = num == 1
+            ? mainCamera.transform.position.x - halfWidth + OffsetPlayer1
+            : mainCamera.transform.position.x + halfWidth - OffsetPlayer2;
+        var character = num == 1 ? characterDatabase1.GetCharacter(index) : characterDatabase2.GetCharacter(index);
+        var child = Instantiate(character.characterPrefab, position, Quaternion.identity);
+        child.transform.SetParent(canvas.transform, true);
     }
 }

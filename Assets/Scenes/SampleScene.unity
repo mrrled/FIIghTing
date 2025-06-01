@@ -3786,6 +3786,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterDatabase1: {fileID: 11400000, guid: 8463b772679baac4da680409442bb589, type: 2}
   characterDatabase2: {fileID: 11400000, guid: 64df174b69171434c8447e4457ab07a2, type: 2}
+  canvas: {fileID: 1019149713}
+  offset: 9.4
 --- !u!4 &1577016697
 Transform:
   m_ObjectHideFlags: 0
