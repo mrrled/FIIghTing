@@ -1,0 +1,531 @@
+fileFormatVersion: 2
+guid: 6771d48250457ac4a9ac548f34243389
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4771061362661771564
+    second: simonov_spritelist3_0
+  - first:
+      213: -4282261411377114706
+    second: simonov_spritelist3_1
+  - first:
+      213: -7259788022705468500
+    second: simonov_spritelist3_2
+  - first:
+      213: -1818945784005771877
+    second: simonov_spritelist3_3
+  - first:
+      213: -3895066103771997935
+    second: simonov_spritelist3_4
+  - first:
+      213: -6082206268852085138
+    second: simonov_spritelist3_5
+  - first:
+      213: -5910576411840557884
+    second: simonov_spritelist3_6
+  - first:
+      213: 6086082350606710992
+    second: simonov_spritelist3_7
+  - first:
+      213: 3228445616156757292
+    second: simonov_spritelist3_8
+  - first:
+      213: -2717823812938701574
+    second: simonov_spritelist3_9
+  - first:
+      213: 8109202068220339114
+    second: simonov_spritelist3_10
+  - first:
+      213: -7049551992139951090
+    second: simonov_spritelist3_11
+  - first:
+      213: 4111511307747473834
+    second: simonov_spritelist3_12
+  - first:
+      213: -7540921558555373400
+    second: simonov_spritelist3_13
+  - first:
+      213: -5523620589303036880
+    second: simonov_spritelist3_14
+  - first:
+      213: -8008197979304613322
+    second: simonov_spritelist3_15
+  - first:
+      213: 6779675728288940884
+    second: simonov_spritelist3_16
+  - first:
+      213: 6618769560895915057
+    second: simonov_spritelist3_17
+  - first:
+      213: -6287369868134529224
+    second: simonov_spritelist3_18
+  - first:
+      213: 3128692979601145137
+    second: simonov_spritelist3_19
+  - first:
+      213: -8488931905536452556
+    second: simonov_spritelist3_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: simonov_spritelist3_1
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 2495
+        width: 1066
+        height: 1478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea1118b4fe95294c0800000000000000
+      internalID: -4282261411377114706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simonov_spritelist3_3
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 2489
+        width: 1121
+        height: 1478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9d34a6527ec1c6e0800000000000000
+      internalID: -1818945784005771877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simonov_spritelist3_5
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 2471
+        width: 1140
+        height: 1478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6eda669f99a79ba0800000000000000
+      internalID: -6082206268852085138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simonov_spritelist3_6
+      rect:
+        serializedVersion: 2
+        x: 4047
+        y: 2483
+        width: 1138
+        height: 1478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ccc07aa11a69fda0800000000000000
+      internalID: -5910576411840557884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simonov_spritelist3_8
+      rect:
+        serializedVersion: 2
+        x: 5281
+        y: 2495
+        width: 1146
+        height: 1478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2dc0bfce2ebdcc20800000000000000
+      internalID: 3228445616156757292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simonov_spritelist3_9
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 257
+        width: 974
+        height: 1478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af4e0bb44a9584ad0800000000000000
+      internalID: -2717823812938701574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simonov_spritelist3_10
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 227
+        width: 890
+        height: 1478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa3e220115ca98070800000000000000
+      internalID: 8109202068220339114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simonov_spritelist3_11
+      rect:
+        serializedVersion: 2
+        x: 2381
+        y: 227
+        width: 710
+        height: 1478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e04d9d230d5fa2e90800000000000000
+      internalID: -7049551992139951090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simonov_spritelist3_13
+      rect:
+        serializedVersion: 2
+        x: 3335
+        y: 227
+        width: 530
+        height: 1448
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a0d837cbc3495790800000000000000
+      internalID: -7540921558555373400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simonov_spritelist3_14
+      rect:
+        serializedVersion: 2
+        x: 4127
+        y: 233
+        width: 908
+        height: 1442
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0340f84e6582853b0800000000000000
+      internalID: -5523620589303036880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simonov_spritelist3_15
+      rect:
+        serializedVersion: 2
+        x: 5285
+        y: 215
+        width: 932
+        height: 1478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63a2c88fd5a2dd090800000000000000
+      internalID: -8008197979304613322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simonov_spritelist3_17
+      rect:
+        serializedVersion: 2
+        x: 6431
+        y: 227
+        width: 1124
+        height: 1478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1348e5f09d79adb50800000000000000
+      internalID: 6618769560895915057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simonov_spritelist3_18
+      rect:
+        serializedVersion: 2
+        x: 7715
+        y: 221
+        width: 764
+        height: 1478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 837c856ba66ceb8a0800000000000000
+      internalID: -6287369868134529224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simonov_spritelist3_19
+      rect:
+        serializedVersion: 2
+        x: 8675
+        y: 233
+        width: 560
+        height: 1478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d726c30b95b6b20800000000000000
+      internalID: 3128692979601145137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simonov_spritelist3_20
+      rect:
+        serializedVersion: 2
+        x: 9491
+        y: 185
+        width: 578
+        height: 1478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43815008861413a80800000000000000
+      internalID: -8488931905536452556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ef11bbd5464ea524babfe09a33871125
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      simonov_spritelist3_0: 4771061362661771564
+      simonov_spritelist3_1: -4282261411377114706
+      simonov_spritelist3_10: 8109202068220339114
+      simonov_spritelist3_11: -7049551992139951090
+      simonov_spritelist3_12: 4111511307747473834
+      simonov_spritelist3_13: -7540921558555373400
+      simonov_spritelist3_14: -5523620589303036880
+      simonov_spritelist3_15: -8008197979304613322
+      simonov_spritelist3_16: 6779675728288940884
+      simonov_spritelist3_17: 6618769560895915057
+      simonov_spritelist3_18: -6287369868134529224
+      simonov_spritelist3_19: 3128692979601145137
+      simonov_spritelist3_2: -7259788022705468500
+      simonov_spritelist3_20: -8488931905536452556
+      simonov_spritelist3_3: -1818945784005771877
+      simonov_spritelist3_4: -3895066103771997935
+      simonov_spritelist3_5: -6082206268852085138
+      simonov_spritelist3_6: -5910576411840557884
+      simonov_spritelist3_7: 6086082350606710992
+      simonov_spritelist3_8: 3228445616156757292
+      simonov_spritelist3_9: -2717823812938701574
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

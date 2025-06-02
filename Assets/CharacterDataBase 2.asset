@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character:
   - characterPrefab: {fileID: 5308135882494042180, guid: b0ae8b48d4c953545b202da2b1fb9728, type: 3}
-    characterPreview: {fileID: 7809157847302988670, guid: 1c9f0bc398f2bac478870234c63b00e8, type: 3}
-  - characterPrefab: {fileID: 2478181252575380140, guid: 677835f92f0454f49a65f3dd3d4976dd, type: 3}
     characterPreview: {fileID: -4228536024479518375, guid: 151453708284e954bb21f2181c04d6b9, type: 3}
+  - characterPrefab: {fileID: 2478181252575380140, guid: 677835f92f0454f49a65f3dd3d4976dd, type: 3}
+    characterPreview: {fileID: 7446292737518494479, guid: 211d178af0653dc449f98cc4bd41efa3, type: 3}
