@@ -8,9 +8,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2029169253917013794, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 8.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029169253917013794, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 14.782035
+      objectReference: {fileID: 0}
+    - target: {fileID: 2221236676081810808, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.01338752
+      objectReference: {fileID: 0}
+    - target: {fileID: 2221236676081810808, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1480677
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251806577769230641, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251806577769230641, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1325582947422944798, guid: a55887ff8571ffe478cc703301a2dfbb, type: 3}
     - target: {fileID: 4251806577769230641, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
       propertyPath: m_Color.b
-      value: 0.98227924
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4251806577769230641, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
       propertyPath: m_Color.g
@@ -18,15 +42,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4251806577769230641, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
       propertyPath: m_Color.r
-      value: 0.5613208
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5924978928628197908, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.19
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5924978928628197908, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.015528
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5924978928628197908, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -64,6 +88,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BluePlayer1
       objectReference: {fileID: 0}
+    - target: {fileID: 8878275064238735482, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: bd9073fca5170014e9a597e2a8d05aec, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

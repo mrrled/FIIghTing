@@ -4,7 +4,6 @@ public class CharacterLoader : MonoBehaviour
 {
     public CharacterDataBase characterDatabase1;
     public CharacterDataBase characterDatabase2;
-    public GameObject canvas;
     
     private const float OffsetPlayer1 = 9.4f;
     private const float OffsetPlayer2 = 14f;
@@ -28,8 +27,7 @@ public class CharacterLoader : MonoBehaviour
         position.x = num == 1
             ? mainCamera.transform.position.x - halfWidth + OffsetPlayer1
             : mainCamera.transform.position.x + halfWidth - OffsetPlayer2;
-        var character = num == 1 ? characterDatabase1.GetCharacter(index) : characterDatabase2.GetCharacter(index);
-        var child = Instantiate(character.characterPrefab, position, Quaternion.identity);
-        child.transform.SetParent(canvas.transform, true);
+        var character = num == 1 ? characterDatabase1.GetCharacter(index) : characterDatabase2.GetCharacter(index); 
+        Instantiate(character.characterPrefab, position, Quaternion.identity);
     }
 }
