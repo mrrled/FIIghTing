@@ -8,6 +8,7 @@ public class Attack : MonoBehaviour
 
     public void Attacking(InputAction.CallbackContext context)
     {
-        animator.SetTrigger(animationTrigger);
+        if (context.performed)
+            animator.SetTrigger(animationTrigger);
     }
 }

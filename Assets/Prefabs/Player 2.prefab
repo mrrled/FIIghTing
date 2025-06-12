@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4318074000161413833
 Transform:
   m_ObjectHideFlags: 0
@@ -242,10 +242,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  healthBar: {fileID: 4106930202007493516}
-  staminaBar: {fileID: 6823875981141558763}
   maxStamina: 100
   currentStamina: 0
+  healthBar: {fileID: 4106930202007493516}
+  staminaBar: {fileID: 6823875981141558763}
   attackSound: {fileID: 9024689219822400639}
   animator: {fileID: 461809756941351981}
   receiveDamageTrigger: hit
@@ -852,7 +852,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5609186363154100962
 Transform:
   m_ObjectHideFlags: 0
@@ -1485,11 +1485,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93848bf4bd3e0e84bb7d7222fe053131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: {fileID: 4318074000161413833}
   animator: {fileID: 461809756941351981}
-  existingHitboxObject: {fileID: 27103446109296397}
   animationTrigger: Player1_attack
-  attackDuration: 0.7
 --- !u!95 &461809756941351981
 Animator:
   serializedVersion: 7
@@ -1524,11 +1521,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93848bf4bd3e0e84bb7d7222fe053131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: {fileID: 5609186363154100962}
   animator: {fileID: 461809756941351981}
-  existingHitboxObject: {fileID: 5373515538011483864}
   animationTrigger: Player1_attackLeg
-  attackDuration: 1.2
 --- !u!1 &9006637806626918344
 GameObject:
   m_ObjectHideFlags: 0

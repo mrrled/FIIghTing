@@ -6,18 +6,18 @@ public class Hurtbox : MonoBehaviour
 {
     public float maxHealth = 100f;
     public float currentHealth;
-    public Image healthBar;
-    public Image staminaBar;
     public float maxStamina = 100f;
     public float currentStamina;
+    public Image healthBar;
+    public Image staminaBar;
     public AudioSource attackSound;
     public Animator animator;
     public string receiveDamageTrigger = "hit";
 
     private const float InvincibilityDuration = 0.5f;
-    private float _nextTimeCanTakeDamage;
-    
     private const float BlockCoefficient = 2.0f;
+    
+    private float _nextTimeCanTakeDamage;
     
     void Start()
     {

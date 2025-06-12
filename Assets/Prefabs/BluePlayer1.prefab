@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.1480677
       objectReference: {fileID: 0}
+    - target: {fileID: 3790827419968247202, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
+      propertyPath: m_GravityScale
+      value: 4.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4251806577769230641, guid: 3a5035652f66ef64688d5b3cdad1cfd1, type: 3}
       propertyPath: m_FlipX
       value: 0
