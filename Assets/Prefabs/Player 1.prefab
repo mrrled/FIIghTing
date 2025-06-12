@@ -479,11 +479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93848bf4bd3e0e84bb7d7222fe053131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: {fileID: 5094051439770887838}
   animator: {fileID: 8878275064238735482}
-  existingHitboxObject: {fileID: 9024404238879189850}
   animationTrigger: Player1_attack
-  attackDuration: 0.7
 --- !u!95 &8878275064238735482
 Animator:
   serializedVersion: 7
@@ -518,11 +515,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93848bf4bd3e0e84bb7d7222fe053131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: {fileID: 3497749760245698229}
   animator: {fileID: 8878275064238735482}
-  existingHitboxObject: {fileID: 4021673021551121039}
   animationTrigger: Player1_attackLeg
-  attackDuration: 1.2
 --- !u!1 &4014834463697549783
 GameObject:
   m_ObjectHideFlags: 0

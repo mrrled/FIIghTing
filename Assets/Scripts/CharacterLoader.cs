@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
 
 public class CharacterLoader : MonoBehaviour
 {
@@ -7,6 +9,8 @@ public class CharacterLoader : MonoBehaviour
     
     private const float OffsetPlayer1 = 9.4f;
     private const float OffsetPlayer2 = 14f;
+    
+    private readonly ReadOnlyArray<Gamepad> _gamepads = Gamepad.all;
 
     void Awake()
     {
@@ -28,6 +32,9 @@ public class CharacterLoader : MonoBehaviour
             ? mainCamera.transform.position.x - halfWidth + OffsetPlayer1
             : mainCamera.transform.position.x + halfWidth - OffsetPlayer2;
         var character = num == 1 ? characterDatabase1.GetCharacter(index) : characterDatabase2.GetCharacter(index); 
-        Instantiate(character.characterPrefab, position, Quaternion.identity);
+        var player = Instantiate(character.characterPrefab, position, Quaternion.identity);
+        var playerInput = player.transform.GetComponentInChildren<PlayerInput>();
+        if (_gamepads.Count > 0)
+            playerInput.SwitchCurrentControlScheme("Gamepad", _gamepads[num - 1]);
     }
 }
