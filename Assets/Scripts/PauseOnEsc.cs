@@ -12,7 +12,7 @@ public class PauseOnEsc : MonoBehaviour
 
     void Update()
     {
-        if (!Input.GetKeyDown(KeyCode.Escape)) return;
+        if (!Input.GetButtonDown("Cancel")) return;
         if(!isPaused)
         {
             PauseGame();

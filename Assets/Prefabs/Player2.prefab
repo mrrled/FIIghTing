@@ -92,6 +92,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5316196802857298421, guid: 677835f92f0454f49a65f3dd3d4976dd, type: 3}
+      propertyPath: m_GravityScale
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7022337809746414453, guid: 677835f92f0454f49a65f3dd3d4976dd, type: 3}
       propertyPath: m_Size.x
       value: 3.824214
