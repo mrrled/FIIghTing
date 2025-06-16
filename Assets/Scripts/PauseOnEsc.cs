@@ -6,6 +6,7 @@ public class PauseOnEsc : MonoBehaviour
     public GameObject panel;
     public GameObject tipsPanel;
     public GameObject continueButton;
+    public GameObject settingsPanel;
     public bool isPaused;
     
 
@@ -32,6 +33,7 @@ public class PauseOnEsc : MonoBehaviour
     public void ContinueGame(){
         panel.SetActive(false);
         tipsPanel.SetActive(false);
+        settingsPanel.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
     }
